@@ -32,7 +32,7 @@ widgets:
 ### Work Experience
 
 - [JUL 2025 ~ ] AI Product Lead, [HealingPaper (UNNI)](https://www.healingpaper.com/)
-- [JAN 2022 ~ JUN 2025] Co-founder & CTO, [softly](https://softly.ai/)
+- [JAN 2022 ~ JUN 2025] Co-founder & CTO, softly
 - [OCT 2020 ~ DEC 2021] NLP Research Engineer, [Upstage](https://upstage.ai/)
 - [DEC 2018 ~ OCT 2020] NLP Research Engineer, [Papago](https://papago.naver.com/), [NAVER Corporation](https://www.navercorp.com/en/index.nhn)
 - [FEB 2018 ~ DEC 2018] ML Research Engineer, Search Modeling, Search & Clova, [NAVER Corporation](https://www.navercorp.com/en/index.nhn)
