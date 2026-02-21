@@ -29,7 +29,7 @@ widgets:
 
 ## Introduction
 
-모두가 다 알고 있는 사실이지만, 어뷰저는 존재한다. 드루킹과 {% post_link 2019-08-03-Naver-News-Comments-Analysis-(2) Naver News Commnets Analysis (2)%} 에서 나온 결론으로도 뒷받침될 수 있지만 트위터에 `m.news.naver.com/comment` 라고 검색하기만 해도 아래와 같이 댓글 조작의 흔적을 쉽게 발견할 수 있다. 
+모두가 다 알고 있는 사실이지만, 어뷰저는 존재한다. 드루킹과 {% post_link naver-news-comments-analysis-2 "Naver News Comments Analysis (2)" %} 에서 나온 결론으로도 뒷받침될 수 있지만 트위터에 `m.news.naver.com/comment` 라고 검색하기만 해도 아래와 같이 댓글 조작의 흔적을 쉽게 발견할 수 있다. 
 
 <img src="/assets/images/twitter.png?style=centerme" width=60% alt="https://twitter.com/search?q=m.news.naver.com%2Fcomment&src=recent_search_click">
 <br>

@@ -58,7 +58,7 @@ label이 없는 상황에서 어뷰저를 특정짓는 것과 그 사용자가 �
 
 ### Data preprocessing
 
-{% post_link 2019-07-25-Naver-News-Comments-Analysis-(1) %} 에서 사용했던 데이터에서 추가로 필터링이 필요했다. 크롤링한 댓글 데이터에 hashing 된 아이디가 포함된 것이 2015년 12월 이후였기 때문이다.
+{% post_link naver-news-comments-analysis-1 "Naver News Comment Analysis (1)" %} 에서 사용했던 데이터에서 추가로 필터링이 필요했다. 크롤링한 댓글 데이터에 hashing 된 아이디가 포함된 것이 2015년 12월 이후였기 때문이다.
 
 - 사용한 댓글 데이터 기간: 2015.12.08 ~ 2018.05.25
 
