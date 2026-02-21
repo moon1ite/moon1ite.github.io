@@ -54,7 +54,7 @@ We see AI as more than a tool—it's a partner in progress. Our mission is to re
 
 ### Talks
 
-- **AI and Marginarlized Language**. July 2023. [ICML Panel Discussion](https://icml.cc/virtual/2023/index.html).
+- **AI and Marginalized Language**. July 2023. [ICML Panel Discussion](https://icml.cc/virtual/2023/index.html).
 - **KLUE and XTREME**. Sep 2021. XTREME Talks (Google Internal Seminar Series).
 - **KLUE: Korean Language Understanding Evaluation**. Sep 2021. [BigScience Episode #2](https://bigscience.huggingface.co/). [[youtube]](https://www.youtube.com/watch?v=w4DYkRHceqc)
 - **[AI와 저작권법] 내가 만든 AI 모델은 합법일까, 불법일까?**. Feb 2021. [Boostcamp AI Tech](https://boostcamp.connect.or.kr/program_ai.html).
