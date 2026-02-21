@@ -25,15 +25,14 @@ widgets:
     position: left
 ---
 
-**I'm Jihyung Moon, Co-founder & CTO at SoftlyAI**
-
-We see AI as more than a tool—it's a partner in progress. Our mission is to redefine productivity, helping professionals move beyond simply doing more to focus on achieving what truly matters.
+**I'm Jihyung Moon.** I make AI products. Previously made AI papers. Still debugging.
 
 ---
 
 ### Work Experience
 
-- [JAN 2022 ~ ] Co-founder & CTO, [SoftlyAI](https://softly.ai/)
+- [JUL 2025 ~ ] AI Product Lead, [HealingPaper (UNNI)](https://www.healingpaper.com/)
+- [JAN 2022 ~ JUN 2025] Co-founder & CTO, [softly](https://softly.ai/)
 - [OCT 2020 ~ DEC 2021] NLP Research Engineer, [Upstage](https://upstage.ai/)
 - [DEC 2018 ~ OCT 2020] NLP Research Engineer, [Papago](https://papago.naver.com/), [NAVER Corporation](https://www.navercorp.com/en/index.nhn)
 - [FEB 2018 ~ DEC 2018] ML Research Engineer, Search Modeling, Search & Clova, [NAVER Corporation](https://www.navercorp.com/en/index.nhn)
