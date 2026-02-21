@@ -7,17 +7,18 @@ widgets:
     position: left
     avatar: /img/jihyung-espresso.jpg
     avatar_rounded: true
-    follow_link: "https://github.com/inmoonlight"
+    follow_link: /
+    follow_title: Home
     social_links:
       Github:
         icon: fab fa-github
-        url: "https://github.com/inmoonlight"
+        url: "https://github.com/moon1ite"
       Google Scholar:
         icon: fas fa-graduation-cap
         url: "https://scholar.google.com/citations?user=w5idTSEAAAAJ&hl=en&authuser=1"
       LinkedIn:
         icon: fab fa-linkedin
-        url: "https://www.linkedin.com/in/mjihyung"
+        url: "https://www.linkedin.com/in/jihyung-moon"
   - type: categories
     position: left
   - type: recent_posts
