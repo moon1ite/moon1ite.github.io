@@ -64,22 +64,27 @@ Qbit은 언제나 다음의 조건을 만족시킨다.
 따라서 아래의 예시들은 qbit에 해당된다.
 
 
-\\(\\begin{pmatrix}
+\\[
+\\begin{pmatrix}
 \\frac{1}{\\sqrt{2}} \\\\
 \\frac{1}{\\sqrt{2}}
- \\end{pmatrix}\\)
-\\(\\begin{pmatrix}
+\\end{pmatrix}
+\\hspace{10pt}
+\\begin{pmatrix}
 \\frac{1}{2} \\\\
 \\frac{\\sqrt{3}}{2}
- \\end{pmatrix}\\)
-\\(\\begin{pmatrix}
- 1 \\\\
- 0
- \\end{pmatrix}\\)
-\\(\\begin{pmatrix}
- 0 \\\\
- -1
- \\end{pmatrix}\\)
+\\end{pmatrix}
+\\hspace{10pt}
+\\begin{pmatrix}
+1 \\\\
+0
+\\end{pmatrix}
+\\hspace{10pt}
+\\begin{pmatrix}
+0 \\\\
+-1
+\\end{pmatrix}
+\\]
 
 그리고 이 모든 벡터들의 basis가 되는 \\(\\begin{pmatrix} 1 \\\\0 \\end{pmatrix}\\)과 \\(\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}\\)은 각각 \\(\\mid 0\\rangle\\)과 \\(\\mid 1\\rangle\\)이라는 특별한 기호로 정의한다.
 

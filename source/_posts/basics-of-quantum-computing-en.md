@@ -18,13 +18,13 @@ widgets:
      position: left
 ---
 
-I kept reading that qubits can represent \\(2^n\\) states simultaneously, and I kept nodding along. Then I asked myself three questions and couldn't answer any of them.
+I kept reading that qbits can represent \\(2^n\\) states simultaneously, and I kept nodding along. Then I asked myself three questions and couldn't answer any of them.
 
 <!--more-->
 
 - **Q1.** Can't n classical bits also represent \\(2^n\\) states? Three bits give you 000, 001, 010, 011, 100, 101, 110, 111 -- that's eight states.
 - **Q2.** The quantum world is governed by the uncertainty principle, so how does a quantum computer actually perform computations, and how does this reduce computational cost?
-- **Q3.** What exactly does it mean for qubits to be entangled?
+- **Q3.** What exactly does it mean for qbits to be entangled?
 
 Plain language kept giving me hand-wavy answers. The math turned out to be simpler than I expected.
 
@@ -34,60 +34,65 @@ Plain language kept giving me hand-wavy answers. The math turned out to be simpl
 
 The video is over an hour, so what follows is my reorganization of the material -- a `Hello World!` for the quantum world.
 
-A quantum computer can solve in one query what takes a classical computer two. The Deutsch-Jozsa problem shows why. To get there, we need qubits, matrix operations, and a few logic gates.
+A quantum computer can solve in one query what takes a classical computer two. The Deutsch-Jozsa problem shows why. To get there, we need qbits, matrix operations, and a few logic gates.
 
 ## Basics
 
-### Qubit
+### Qbit
 
-A qubit is the fundamental unit of quantum computation. It always satisfies the following condition:
+A qbit is the fundamental unit of quantum computation. It always satisfies the following condition:
 
-> A qubit, represented by \\(\\begin{pmatrix} \\alpha \\\\ \\beta \\end{pmatrix}\\)
+> A qbit, represented by \\(\\begin{pmatrix} \\alpha \\\\ \\beta \\end{pmatrix}\\)
 > where \\(\\alpha\\) and \\(\\beta\\) are complex numbers must be constrained by the equation \\(||\\alpha||^2 + ||\\beta||^2 = 1\\)
 
-So the following are all valid qubits:
+So the following are all valid qbits:
 
 
-\\(\\begin{pmatrix}
+\\[
+\\begin{pmatrix}
 \\frac{1}{\\sqrt{2}} \\\\
 \\frac{1}{\\sqrt{2}}
- \\end{pmatrix}\\)
-\\(\\begin{pmatrix}
+\\end{pmatrix}
+\\hspace{10pt}
+\\begin{pmatrix}
 \\frac{1}{2} \\\\
 \\frac{\\sqrt{3}}{2}
- \\end{pmatrix}\\)
-\\(\\begin{pmatrix}
- 1 \\\\
- 0
- \\end{pmatrix}\\)
-\\(\\begin{pmatrix}
- 0 \\\\
- -1
- \\end{pmatrix}\\)
+\\end{pmatrix}
+\\hspace{10pt}
+\\begin{pmatrix}
+1 \\\\
+0
+\\end{pmatrix}
+\\hspace{10pt}
+\\begin{pmatrix}
+0 \\\\
+-1
+\\end{pmatrix}
+\\]
 
 The basis vectors for all of these, \\(\\begin{pmatrix} 1 \\\\0 \\end{pmatrix}\\) and \\(\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}\\), are given the special notation \\(\\mid 0\\rangle\\) and \\(\\mid 1\\rangle\\), respectively.
 
 
 ### Superposition
 
-This is the property you always hear about when people discuss qubits. It's often described as "being 0 and 1 at the same time," but a more precise description is: "When we measure a qubit, it collapses to an actual value of 0 or 1."
+This is the property you always hear about when people discuss qbits. It's often described as "being 0 and 1 at the same time," but a more precise description is: "When we measure a qbit, it collapses to an actual value of 0 or 1."
 
-Let's take one of the qubit vectors from above as an example.
+Let's take one of the qbit vectors from above as an example.
 
 \\[\\begin{pmatrix}
 \\frac{1}{\\sqrt{2}} \\\\
 \\frac{1}{\\sqrt{2}}
 \\end{pmatrix}\\]
 
-This qubit has a \\(\\frac{1}{2}\\) ( \\(= || \\frac{1}{\\sqrt{2}} || ^2\\)) probability of collapsing to either \\(0\\) or \\(1\\).
+This qbit has a \\(\\frac{1}{2}\\) ( \\(= || \\frac{1}{\\sqrt{2}} || ^2\\)) probability of collapsing to either \\(0\\) or \\(1\\).
 
-Thankfully, [IBM has made their quantum computers accessible via an API](https://quantum-computing.ibm.com/). If we create this qubit there and measure it 1024 times, we can confirm that 0 and 1 each appear about 50% of the time.
+Thankfully, [IBM has made their quantum computers accessible via an API](https://quantum-computing.ibm.com/). If we create this qbit there and measure it 1024 times, we can confirm that 0 and 1 each appear about 50% of the time.
 
-<img src="/assets/images/qubit_1_2_example.png?style=centerme" width=20% alt="Through an H gate, |0> becomes the example qubit. (This is covered below.)">
+<img src="/assets/images/qubit_1_2_example.png?style=centerme" width=20% alt="Through an H gate, |0> becomes the example qbit. (This is covered below.)">
 
 <img src="/assets/images/qubit_1_2_result.png?style=centerme" width=95% alt="Result of 1024 measurements. It shows 0 and 1 with roughly 50% probability each.">
 
-\\(\\begin{pmatrix} \\frac{1}{2} \\\\ \\frac{\\sqrt{3}}{2}  \\end{pmatrix}\\) is a qubit with a \\(\\frac{1}{4}\\) probability of collapsing to \\(0\\) and a \\(\\frac{3}{4}\\) probability of collapsing to \\(1\\).
+\\(\\begin{pmatrix} \\frac{1}{2} \\\\ \\frac{\\sqrt{3}}{2}  \\end{pmatrix}\\) is a qbit with a \\(\\frac{1}{4}\\) probability of collapsing to \\(0\\) and a \\(\\frac{3}{4}\\) probability of collapsing to \\(1\\).
 
 \\(|0\\rangle\\) always collapses to 0.
 
@@ -98,7 +103,7 @@ Thankfully, [IBM has made their quantum computers accessible via an API](https:/
 
 ### Tensor product
 
-To represent multiple qubits, we need the concept of the tensor product.
+To represent multiple qbits, we need the concept of the tensor product.
 The notation works like this:
 
 \\[
@@ -108,7 +113,7 @@ x\_1  \\binom{y\_0}{y\_1} \\end{pmatrix}
 = \\begin{pmatrix} x\_0 y\_0 \\\\ x\_0 y\_1 \\\\ x\_1 y\_0 \\\\ x\_1 y\_1 \\end{pmatrix}
 \\]
 
-Using this, we can represent 2 or 3 qubits as vectors.
+Using this, we can represent 2 or 3 qbits as vectors.
 
 \\[
 |01\\rangle = \\binom{1}{0} \\otimes \\binom{0}{1} = \\begin{pmatrix}
@@ -120,19 +125,19 @@ Using this, we can represent 2 or 3 qubits as vectors.
 \\end{pmatrix}
 \\]
 
-A vector expressed as the result of a tensor product is called a product state. From this, we can see that the product state of \\(n\\) qubits has size \\(2^n\\).
-If we have the following multi-qubit state:
+A vector expressed as the result of a tensor product is called a product state. From this, we can see that the product state of \\(n\\) qbits has size \\(2^n\\).
+If we have the following multi-qbit state:
 \\(
 \\binom{\\frac{1}{\\sqrt{2}}}{\\frac{1}{\\sqrt{2}}} \\otimes \\binom{\\frac{1}{\\sqrt{2}}}{\\frac{1}{\\sqrt{2}}} =
 \\begin{pmatrix}
  \\frac{1}{2} \\\\ \\frac{1}{2} \\\\ \\frac{1}{2} \\\\ \\frac{1}{2}
 \\end{pmatrix}
 \\)
-then the probabilities of collapsing to \\(\\mid 00\\rangle\\), \\(\\mid 01\\rangle\\), \\(\\mid 10\\rangle\\), and \\(\\mid 11\\rangle\\) are each \\(\\frac{1}{4}\\), meaning it can represent all four states simultaneously. In other words, when people say qubits can represent \\(2^n\\) states unlike classical bits, they're comparing the maximum number of states that can be held *simultaneously*. A classical bit can never be in more than one state at a time, so it can only process one piece of information per operation.
+then the probabilities of collapsing to \\(\\mid 00\\rangle\\), \\(\\mid 01\\rangle\\), \\(\\mid 10\\rangle\\), and \\(\\mid 11\\rangle\\) are each \\(\\frac{1}{4}\\), meaning it can represent all four states simultaneously. In other words, when people say qbits can represent \\(2^n\\) states unlike classical bits, they're comparing the maximum number of states that can be held *simultaneously*. A classical bit can never be in more than one state at a time, so it can only process one piece of information per operation.
 
 Another important property of product states -- one that distinguishes them from entanglement, which we'll cover later -- is that **they can be factored into independent states**.
 
-The product state of multiple qubits satisfies the same constraint as a single qubit.
+The product state of multiple qbits satisfies the same constraint as a single qbit.
 
 \\[
 \\binom{a}{b} \\otimes \\binom{c}{d} =
@@ -199,10 +204,10 @@ This operation can also be represented as a matrix.
 \\end{pmatrix}
 \\]
 
-<img src="/assets/images/CNOT_examples.png?style=centerme" width=60% alt="CNOT examples applied to 2-qubit states">
+<img src="/assets/images/CNOT_examples.png?style=centerme" width=60% alt="CNOT examples applied to 2-qbit states">
 
 Note how the operations in [2.4](#bit-operations) and [2.5](#cnot-one-of-the-2-bit-operations) were expressed as matrices.
-In the quantum world, where probability reigns, the only way to perform deterministic operations is to multiply an unobserved qubit by a matrix.
+In the quantum world, where probability reigns, the only way to perform deterministic operations is to multiply an unobserved qbit by a matrix.
 In the example below, the one thing we can be certain of is that the probabilities of observing 0 and 1 have been swapped.
 
 \\[
@@ -250,7 +255,7 @@ This is the H gate mentioned earlier.
 \\end{pmatrix}
 \\]
 
-The Hadamard gate takes a 0- or 1-qubit and transforms it into a qubit with equal probability of being 0 or 1.
+The Hadamard gate takes a 0- or 1-qbit and transforms it into a qbit with equal probability of being 0 or 1.
 
 \\[
 H\\mid0\\rangle = \\begin{pmatrix}
@@ -274,7 +279,7 @@ H\\mid1\\rangle = \\begin{pmatrix}
 \\end{pmatrix}
 \\]
 
-The Hadamard gate has another important property: it sends a qubit with equal probability of 0 and 1 back to a definite 0- or 1-qubit.
+The Hadamard gate has another important property: it sends a qbit with equal probability of 0 and 1 back to a definite 0- or 1-qbit.
 
 \\[
 \\begin{pmatrix}
@@ -301,7 +306,7 @@ The Hadamard gate has another important property: it sends a qubit with equal pr
 
 #### X gate
 
-The X gate swaps the top and bottom components of a qubit.
+The X gate swaps the top and bottom components of a qbit.
 
 \\[
   X =
@@ -350,7 +355,7 @@ Starting from \\(\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}\\), follow the arrows 
 
 #### non-reversible matrix
 
-Earlier I mentioned that quantum computers cannot multiply by non-reversible matrices. Among the 1-bit operations, Constant-0 and Constant-1 are non-reversible. To handle these in quantum computing, we use two qubits.
+Earlier I mentioned that quantum computers cannot multiply by non-reversible matrices. Among the 1-bit operations, Constant-0 and Constant-1 are non-reversible. To handle these in quantum computing, we use two qbits.
 
 <img src="/assets/images/quantum_non_reversible.png?style=centerme" width=45%>
 
@@ -382,7 +387,7 @@ Let's walk through each possible BB case to see why.
 
 <img src="/assets/images/quantum_preprocessing.png?style=centerme" width=80%>
 
-Before entering BB, both the input (\\(\\mid 0 \\rangle\\)) and output qubit (\\(\\mid 0 \\rangle\\)) pass through an X gate followed by an H gate, resulting in \\(\\begin{pmatrix} \\frac{1}{\\sqrt{2}} \\\\ \\frac{-1}{\\sqrt{2}} \\end{pmatrix}\\).
+Before entering BB, both the input (\\(\\mid 0 \\rangle\\)) and output qbit (\\(\\mid 0 \\rangle\\)) pass through an X gate followed by an H gate, resulting in \\(\\begin{pmatrix} \\frac{1}{\\sqrt{2}} \\\\ \\frac{-1}{\\sqrt{2}} \\end{pmatrix}\\).
 
 #### case 1) BB is Constant-0
 
@@ -504,7 +509,7 @@ In summary, given the right circuit design, a quantum computer only needs one me
 
 ## Entanglement
 
-The CNOT gate in the Deutsch-Jozsa circuit hints at something deeper. When certain gate combinations act on multiple qubits, the result can't be separated back into individual qubits. That's entanglement.
+The CNOT gate in the Deutsch-Jozsa circuit hints at something deeper. When certain gate combinations act on multiple qbits, the result can't be separated back into individual qbits. That's entanglement.
 
 \\(
 \\begin{pmatrix}
@@ -514,10 +519,10 @@ The CNOT gate in the Deutsch-Jozsa circuit hints at something deeper. When certa
   \\frac{1}{\\sqrt{2}}
 \\end{pmatrix}
 \\)
-is an entangled qubit state. It looks similar to a product state, but differs in one crucial way.
-As explained above, a product state can be factored into individual qubits. An entangled state cannot.
-(If the product state of two qubits **cannot be factored**, they are said to be **entangled**.)
-Because of this, an entangled qubit pair behaves as a single unit -- measuring part of it immediately tells you the state of the rest.
+is an entangled qbit state. It looks similar to a product state, but differs in one crucial way.
+As explained above, a product state can be factored into individual qbits. An entangled state cannot.
+(If the product state of two qbits **cannot be factored**, they are said to be **entangled**.)
+Because of this, an entangled qbit pair behaves as a single unit -- measuring part of it immediately tells you the state of the rest.
 
 Proving that
 \\(
@@ -546,9 +551,9 @@ Since there are no values \\(a\\), \\(b\\), \\(c\\), \\(d\\) that satisfy
 \\),
 this is an entangled state.
 
-Entangled qubits can be easily created using a CNOT gate and an H gate.
+Entangled qbits can be easily created using a CNOT gate and an H gate.
 
-<img src="/assets/images/entanlge.png?style=centerme" width=50% alt="Entangled qubit">
+<img src="/assets/images/entanlge.png?style=centerme" width=50% alt="Entangled qbit">
 
 \\[
 CH\_1
@@ -593,7 +598,7 @@ This is the same H + CNOT pattern that appears in the Deutsch-Jozsa circuit. Ent
 
 The thing that surprised me most: quantum supremacy doesn't just happen. The Deutsch-Jozsa circuit works because someone designed the right sequence of H gates and CNOT operations to extract a global property in one shot. Quantum advantage is engineered, not inherent.
 
-I still don't know what a qubit looks like physically, or how gates are applied to actual hardware. But I now understand *why* a quantum computer can answer in one query what a classical computer needs two for. That feels like enough for a `Hello World!`.
+I still don't know what a qbit looks like physically, or how gates are applied to actual hardware. But I now understand *why* a quantum computer can answer in one query what a classical computer needs two for. That feels like enough for a `Hello World!`.
 
 ## References
 
