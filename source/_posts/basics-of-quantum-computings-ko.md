@@ -2,6 +2,7 @@
 title: "수학으로 이해하는 양자컴퓨터의 기초"
 layout: post
 date: 2019-11-07 00:07
+language: ko
 tags:
 - quantum computing
 categories: 
@@ -182,13 +183,13 @@ Multiple qbits의 product state 또한 single qbit과 같은 성질을 만족시
 \\end{pmatrix}
 \\]
 \\[
-  \\text{Contant-0} = \\begin{pmatrix}
+  \\text{Constant-0} = \\begin{pmatrix}
 1 & 1 \\\\
 0 & 0
 \\end{pmatrix}
 \\]
 \\[
-  \\text{Contant-1} = \\begin{pmatrix}
+  \\text{Constant-1} = \\begin{pmatrix}
 0 & 0 \\\\ 
 1 & 1
 \\end{pmatrix}
