@@ -2,6 +2,7 @@
 title: "Hello World, Quantum Computing"
 layout: post
 date: 2019-11-07 00:07
+description: "A math-based introduction to quantum computing using the Deutsch-Jozsa problem. One query instead of two."
 language: en
 tags:
 - quantum computing

@@ -2,6 +2,7 @@
 title: "Joining HealingPaper"
 layout: post
 date: 2025-07-20 09:00
+description: "Our team joined HealingPaper (강남언니). Here's what we learned about B2C, conviction, and finding the right fit."
 tags:
 - startup
 - AI

@@ -2,6 +2,7 @@
 title: "PyTorch의 view, transpose, reshape 함수의 차이점 이해하기"
 layout: post
 date: 2021-03-03 04:22
+description: "PyTorch view, reshape, transpose의 차이점. contiguous 개념을 이해하면 텐서 차원 변환의 실수를 줄일 수 있다."
 tags:
 - pytorch
 categories: 

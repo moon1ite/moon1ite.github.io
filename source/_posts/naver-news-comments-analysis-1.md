@@ -2,6 +2,7 @@
 title: "Naver News Comment Analysis (1)"
 layout: post
 date: 2019-07-25 22:23
+description: "네이버 뉴스 댓글 데이터 분석 1편. 섹션별 댓글 패턴, 이모지 사용 추이, 그리고 정치 섹션의 특이 현상."
 tags:
 - data analysis
 categories:

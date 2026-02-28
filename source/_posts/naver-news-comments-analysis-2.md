@@ -2,6 +2,7 @@
 title: "Naver News Comment Analysis (2)"
 layout: post
 date: 2019-08-03 17:59
+description: "네이버 뉴스 댓글 분석 2편. 정치 섹션 파워유저 행동 분석, 댓글 정렬 알고리즘, 그리고 여론 왜곡 가능성."
 tags:
 - data analysis
 categories: 

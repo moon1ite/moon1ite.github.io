@@ -2,6 +2,7 @@
 title: "한국어 악성댓글 탐지를 위한 댓글 코퍼스 구축기"
 layout: post
 date: 2020-05-28 21:00
+description: "한국어 혐오 댓글 탐지를 위한 코퍼스 구축 과정 — 데이터셋 설계, 어노테이션 기준, 그리고 논문에 못 담은 이야기."
 thumbnail: /assets/images/hate-speech-background.jpg
 tags:
 - NLP

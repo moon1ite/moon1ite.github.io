@@ -2,6 +2,7 @@
 title: "The Shrinking Moat"
 layout: post
 date: 2026-02-22 09:00
+description: "What I learned building an AI startup as LLMs ate the application layer — and why B2B SaaS is next."
 tags:
 - startup
 - AI

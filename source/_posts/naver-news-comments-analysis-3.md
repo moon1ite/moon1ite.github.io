@@ -2,6 +2,7 @@
 title: "Naver News Comment Analysis (3)"
 layout: post
 date: 2019-09-23 17:25
+description: "네이버 뉴스 댓글 분석 3편. 악성 유저 탐지, 클러스터링, 그리고 댓글 생태계의 구조적 문제."
 tags:
 - data analysis
 categories: 

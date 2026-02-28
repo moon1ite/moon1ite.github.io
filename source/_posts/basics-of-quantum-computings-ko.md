@@ -2,6 +2,7 @@
 title: "수학으로 이해하는 양자컴퓨터의 기초"
 layout: post
 date: 2019-11-07 00:07
+description: "Deutsch-Jozsa 문제를 통해 양자컴퓨터의 기초를 수학적으로 이해하는 글. 고전컴퓨터가 2번 필요한 쿼리를 1번에 해결하는 원리."
 language: ko
 tags:
 - quantum computing
