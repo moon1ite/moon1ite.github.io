@@ -17,50 +17,15 @@
     </url>
 
     <url>
-        <loc>https://www.thespacemoon.com/tags/LLM/</loc>
-        <lastmod>2026-02-22T00:00:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.thespacemoon.com/tags/startup/</loc>
-        <lastmod>2026-02-22T00:00:00.000Z</lastmod>
+        <lastmod>2025-07-20T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.thespacemoon.com/tags/git/</loc>
+        <loc>https://www.thespacemoon.com/tags/engineering/</loc>
         <lastmod>2021-07-10T16:03:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.thespacemoon.com/tags/pytorch/</loc>
-        <lastmod>2021-03-02T19:22:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.thespacemoon.com/tags/pandas/</loc>
-        <lastmod>2021-02-04T05:22:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.thespacemoon.com/tags/NLP/</loc>
-        <lastmod>2020-05-28T12:00:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.thespacemoon.com/tags/data-analysis/</loc>
-        <lastmod>2019-09-23T08:25:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
