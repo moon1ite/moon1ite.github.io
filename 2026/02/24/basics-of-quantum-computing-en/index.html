@@ -71,7 +71,7 @@ satisfies the following condition:</p>
 be constrained by the equation \(||\alpha||^2 + ||\beta||^2 = 1\)</p>
 </blockquote>
 <p>So the following are all valid qbits:</p>
-<p><span class="math display">
+<p><span class="math display">\[
 \begin{pmatrix}
 \frac{1}{\sqrt{2}} \\
 \frac{1}{\sqrt{2}}
@@ -91,7 +91,7 @@ be constrained by the equation \(||\alpha||^2 + ||\beta||^2 = 1\)</p>
 0 \\
 -1
 \end{pmatrix}
-</span></p>
+\]</span></p>
 <p>The basis vectors for all of these, \(\begin{pmatrix} 1 \\0
 \end{pmatrix}\) and \(\begin{pmatrix} 0 \\ 1 \end{pmatrix}\), are given
 the special notation \(\mid 0\rangle\) and \(\mid 1\rangle\),
@@ -102,12 +102,12 @@ It's often described as "being 0 and 1 at the same time," but a more
 precise description is: "When we measure a qbit, it collapses to an
 actual value of 0 or 1."</p>
 <p>Let's take one of the qbit vectors from above as an example.</p>
-<p><span class="math display">
+<p><span class="math display">\[
 \begin{pmatrix}
 \frac{1}{\sqrt{2}} \\
 \frac{1}{\sqrt{2}}
 \end{pmatrix}
-</span></p>
+\]</span></p>
 <p>This qbit has a \(\frac{1}{2}\) ( \(= || \frac{1}{\sqrt{2}} || ^2\))
 probability of collapsing to either \(0\) or \(1\).</p>
 <p>Thankfully, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://quantum-computing.ibm.com/">IBM has made
@@ -125,15 +125,15 @@ a \(\frac{3}{4}\) probability of collapsing to \(1\).</p>
 <h3 id="tensor-product">Tensor product</h3>
 <p>To represent multiple qbits, we need the concept of the tensor
 product. The notation works like this:</p>
-<p><span class="math display">
+<p><span class="math display">\[
 \binom{x\_0}{x\_1} \otimes \binom{y\_0}{y\_1}
 = \begin{pmatrix} x\_0  \binom{y\_0}{y\_1} \\
 x\_1  \binom{y\_0}{y\_1} \end{pmatrix}
 = \begin{pmatrix} x\_0 y\_0 \\ x\_0 y\_1 \\ x\_1 y\_0 \\ x\_1 y\_1
 \end{pmatrix}
-</span></p>
+\]</span></p>
 <p>Using this, we can represent 2 or 3 qbits as vectors.</p>
-<p><span class="math display">
+<p><span class="math display">\[
 |01\rangle = \binom{1}{0} \otimes \binom{0}{1} = \begin{pmatrix}
   0 \\ 1 \\ 0 \\ 0
 \end{pmatrix}
@@ -142,7 +142,7 @@ x\_1  \binom{y\_0}{y\_1} \end{pmatrix}
 \begin{pmatrix}
   0\\ 0\\0\\0 \\ 1 \\ 0 \\ 0 \\ 0
 \end{pmatrix}
-</span></p>
+\]</span></p>
 <p>A vector expressed as the result of a tensor product is called a
 product state. The product state of \(n\) qbits has size \(2^n\). If we
 have the following multi-qbit state: \(
@@ -162,41 +162,41 @@ distinguishes them from entanglement, which we'll cover later -- is that
 <strong>they can be factored into independent states</strong>.</p>
 <p>The product state of multiple qbits satisfies the same constraint as
 a single qbit.</p>
-<p><span class="math display">
+<p><span class="math display">\[
 \binom{a}{b} \otimes \binom{c}{d} =
 \begin{pmatrix}
   ac \\ ad \\ bc \\ bd
 \end{pmatrix}
-</span></p>
-<p><span class="math display">
+\]</span></p>
+<p><span class="math display">\[
 \text{where, } ||ac||^2 + ||ad||^2 + ||bc||^2 + ||bd||^2 = 1
-</span></p>
+\]</span></p>
 <h3 id="bit-operations">1-bit operations</h3>
 <p>There are exactly four possible 1-bit operations: Identity, Negation,
 Constant-0, and Constant-1.</p>
 <p><img src="/assets/images/1bit_operations.png?style=centerme" width="40%" alt="The four types of 1-bit operations"></p>
 <p>Each operation can be represented as a matrix.</p>
-<p><span class="math display">
+<p><span class="math display">\[
 \text{Identity} = \begin{pmatrix}
 1 &amp; 0 \\
 0 &amp; 1
 \end{pmatrix}
-</span> <span class="math display">
+\]</span> <span class="math display">\[
 \text{Negation} = \begin{pmatrix}
 0 &amp; 1 \\
 1 &amp; 0
 \end{pmatrix}
-</span> <span class="math display">
+\]</span> <span class="math display">\[
 \text{Constant-0} = \begin{pmatrix}
 1 &amp; 1 \\
 0 &amp; 0
 \end{pmatrix}
-</span> <span class="math display">
+\]</span> <span class="math display">\[
 \text{Constant-1} = \begin{pmatrix}
 0 &amp; 0 \\
 1 &amp; 1
 \end{pmatrix}
-</span></p>
+\]</span></p>
 <p><img src="/assets/images/1bit_matrix.png?style=centerme" width="70%" alt="Matrix representations of 1-bit operations"></p>
 <h3 id="cnot-one-of-the-2-bit-operations">CNOT (one of the 2-bit
 operations)</h3>
@@ -205,20 +205,20 @@ If the control bit is 0, the target bit stays unchanged. If the control
 bit is 1, the target bit is flipped.</p>
 <p><img src="/assets/images/CNOT_operation.png?style=centerme" width="25%" alt="CNOT"></p>
 <p>This operation can also be represented as a matrix.</p>
-<p><span class="math display">
+<p><span class="math display">\[
 C = \begin{pmatrix}
 1 &amp; 0 &amp; 0 &amp; 0 \\
 0 &amp; 1 &amp; 0 &amp; 0 \\
 0 &amp; 0 &amp; 0 &amp; 1 \\
 0 &amp; 0 &amp; 1 &amp; 0 \\
 \end{pmatrix}
-</span></p>
+\]</span></p>
 <p><img src="/assets/images/CNOT_examples.png?style=centerme" width="60%" alt="CNOT examples applied to 2-qbit states"></p>
 <p>In the quantum world, where probability reigns, the only way to
 perform deterministic operations is to multiply an unobserved qbit by a
 matrix. In the example below, the one thing we can be certain of is that
 the probabilities of observing 0 and 1 have been swapped.</p>
-<p><span class="math display">
+<p><span class="math display">\[
 \begin{pmatrix}
 0 &amp; 1 \\
 1 &amp; 0
@@ -227,7 +227,7 @@ the probabilities of observing 0 and 1 have been swapped.</p>
 \end{pmatrix} = \begin{pmatrix}
   \frac{\sqrt{3}}{2} \\ \frac{1}{2}
 \end{pmatrix}
-</span></p>
+\]</span></p>
 <p>Of course, if we only use \(\mid0\rangle\) or \(\mid1\rangle\), which
 always collapse to 0 or 1, we wouldn't need matrix operations at all --
 but then we'd just be using a classical computer. There would be no
@@ -255,15 +255,15 @@ two queries.</p>
 <p>The answer is one. To see why, we need a few more concepts.</p>
 <h4 id="hadamard-gate">Hadamard gate</h4>
 <p>This is the H gate mentioned earlier.</p>
-<p><span class="math display">
+<p><span class="math display">\[
 H = \begin{pmatrix}
   \frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}} \\
   \frac{1}{\sqrt{2}} &amp; \frac{-1}{\sqrt{2}}
 \end{pmatrix}
-</span></p>
+\]</span></p>
 <p>The Hadamard gate takes a 0- or 1-qbit and transforms it into a qbit
 with equal probability of being 0 or 1.</p>
-<p><span class="math display">
+<p><span class="math display">\[
 H\mid0\rangle = \begin{pmatrix}
   \frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}} \\
   \frac{1}{\sqrt{2}} &amp; \frac{-1}{\sqrt{2}}
@@ -272,8 +272,8 @@ H\mid0\rangle = \begin{pmatrix}
 \end{pmatrix} = \begin{pmatrix}
   \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
 \end{pmatrix}
-</span></p>
-<p><span class="math display">
+\]</span></p>
+<p><span class="math display">\[
 H\mid1\rangle = \begin{pmatrix}
   \frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}} \\
   \frac{1}{\sqrt{2}} &amp; \frac{-1}{\sqrt{2}}
@@ -282,10 +282,10 @@ H\mid1\rangle = \begin{pmatrix}
 \end{pmatrix} = \begin{pmatrix}
   \frac{1}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}}
 \end{pmatrix}
-</span></p>
+\]</span></p>
 <p>The Hadamard gate has another important property: it sends a qbit
 with equal probability of 0 and 1 back to a definite 0- or 1-qbit.</p>
-<p><span class="math display">
+<p><span class="math display">\[
 \begin{pmatrix}
   \frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}} \\
   \frac{1}{\sqrt{2}} &amp; \frac{-1}{\sqrt{2}}
@@ -294,8 +294,8 @@ with equal probability of 0 and 1 back to a definite 0- or 1-qbit.</p>
 \end{pmatrix} = \begin{pmatrix}
   1 \\ 0
 \end{pmatrix}
-</span></p>
-<p><span class="math display">
+\]</span></p>
+<p><span class="math display">\[
 \begin{pmatrix}
   \frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}} \\
   \frac{1}{\sqrt{2}} &amp; \frac{-1}{\sqrt{2}}
@@ -304,17 +304,17 @@ with equal probability of 0 and 1 back to a definite 0- or 1-qbit.</p>
 \end{pmatrix} = \begin{pmatrix}
   0 \\ 1
 \end{pmatrix}
-</span></p>
+\]</span></p>
 <h4 id="x-gate">X gate</h4>
 <p>The X gate swaps the top and bottom components of a qbit.</p>
-<p><span class="math display">
+<p><span class="math display">\[
 X =
 \begin{pmatrix}
    0 &amp; 1 \\
    1 &amp; 0
 \end{pmatrix}
-</span></p>
-<p><span class="math display">
+\]</span></p>
+<p><span class="math display">\[
 \begin{pmatrix}
    0 &amp; 1 \\
    1 &amp; 0
@@ -325,8 +325,8 @@ X =
 = \begin{pmatrix}
   1 \\ 0
 \end{pmatrix}
-</span></p>
-<p><span class="math display">
+\]</span></p>
+<p><span class="math display">\[
 \begin{pmatrix}
    0 &amp; 1 \\
    1 &amp; 0
@@ -337,7 +337,7 @@ X =
 = \begin{pmatrix}
   \frac{1}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}}
 \end{pmatrix}
-</span></p>
+\]</span></p>
 <p>The H gate and X gate operations are easier to understand with the
 diagram below. Red indicates the X gate and yellow indicates the H gate
 direction.</p>
@@ -415,7 +415,7 @@ operation is equivalent to multiplying by \( \begin{pmatrix} 1 &amp; 0
 both Input and Output are \( \begin{pmatrix} \frac{1}{\sqrt{2}} \\
 \frac{-1}{\sqrt{2}} \end{pmatrix} \), so the CNOT operation can be
 written as:</p>
-<p><span class="math display">
+<p><span class="math display">\[
 C \begin{pmatrix}
   \begin{pmatrix}
     \frac{1}{\sqrt{2}} \\
@@ -453,7 +453,7 @@ C \begin{pmatrix}
     \frac{1}{\sqrt{2}} \\
     \frac{-1}{\sqrt{2}}
   \end{pmatrix}
-</span></p>
+\]</span></p>
 <p>So Input changes from \( \begin{pmatrix} \frac{1}{\sqrt{2}} \\
 \frac{-1}{\sqrt{2}} \end{pmatrix} \) to \( \begin{pmatrix}
 \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{pmatrix}\), while Output
@@ -489,7 +489,7 @@ Since there are no values \(a\), \(b\), \(c\), \(d\) that satisfy \(
 <p>Entangled qbits can be easily created using a CNOT gate and an H
 gate.</p>
 <p><img src="/assets/images/entanlge.png?style=centerme" width="50%" alt="Entangled qbit"></p>
-<p><span class="math display">
+<p><span class="math display">\[
 CH\_1
 \begin{pmatrix}
   \begin{pmatrix}
@@ -523,7 +523,7 @@ CH\_1
   0 \\
   \frac{1}{\sqrt{2}}
 \end{pmatrix}
-</span></p>
+\]</span></p>
 <p>This is the same H + CNOT pattern that appears in the Deutsch-Jozsa
 circuit. Entanglement is doing work there even when it isn't the
 point.</p>
