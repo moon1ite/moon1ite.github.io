@@ -1,7 +1,7 @@
 ---
 title: "Hello World, Quantum Computing"
 layout: post
-date: 2019-11-07 00:07
+date: 2026-02-24 00:00
 description: "A math-based introduction to quantum computing using the Deutsch-Jozsa problem. One query instead of two."
 language: en
 tags:
@@ -19,6 +19,8 @@ widgets:
      position: left
 ---
 
+*This is an English translation of the [Korean version](/2019/11/07/basics-of-quantum-computings-ko/).*
+
 I kept reading that qbits can represent \\(2^n\\) states simultaneously, and I kept nodding along. Then I asked myself three questions and couldn't answer any of them.
 
 <!--more-->
@@ -33,7 +35,7 @@ Plain language kept giving me hand-wavy answers. The math turned out to be simpl
 
 [[slide]](https://speakerdeck.com/ahelwer/quantum-computing-for-computer-scientists)
 
-The video is over an hour, so what follows is my reorganization of the material -- a `Hello World!` for the quantum world.
+The video is over an hour. What follows is the shortest path to understanding why — a `Hello World!` for the quantum world.
 
 A quantum computer can solve in one query what takes a classical computer two. The Deutsch-Jozsa problem shows why. To get there, we need qbits, matrix operations, and a few logic gates.
 
@@ -126,7 +128,7 @@ Using this, we can represent 2 or 3 qbits as vectors.
 \\end{pmatrix}
 \\]
 
-A vector expressed as the result of a tensor product is called a product state. From this, we can see that the product state of \\(n\\) qbits has size \\(2^n\\).
+A vector expressed as the result of a tensor product is called a product state. The product state of \\(n\\) qbits has size \\(2^n\\).
 If we have the following multi-qbit state:
 \\(
 \\binom{\\frac{1}{\\sqrt{2}}}{\\frac{1}{\\sqrt{2}}} \\otimes \\binom{\\frac{1}{\\sqrt{2}}}{\\frac{1}{\\sqrt{2}}} =
@@ -207,7 +209,6 @@ This operation can also be represented as a matrix.
 
 <img src="/assets/images/CNOT_examples.png?style=centerme" width=60% alt="CNOT examples applied to 2-qbit states">
 
-Note how the operations in [2.4](#bit-operations) and [2.5](#cnot-one-of-the-2-bit-operations) were expressed as matrices.
 In the quantum world, where probability reigns, the only way to perform deterministic operations is to multiply an unobserved qbit by a matrix.
 In the example below, the one thing we can be certain of is that the probabilities of observing 0 and 1 have been swapped.
 
@@ -226,7 +227,7 @@ In the example below, the one thing we can be certain of is that the probabiliti
 Of course, if we only use \\(\\mid0\\rangle\\) or \\(\\mid1\\rangle\\), which always collapse to 0 or 1, we wouldn't need matrix operations at all -- but then we'd just be using a classical computer.
 There would be no reason to maintain the extreme conditions near 0K required for quantum computation.
 
-So matrix operations are critical in quantum computing. There's one additional constraint: the matrices used must be **reversible**.
+There's one constraint: the matrices used must be **reversible**.
 This means that the Constant-0 and Constant-1 operations from the 1-bit operations above cannot be computed by simple matrix multiplication -- a different approach is needed.
 
 ## The Deutsch-Jozsa problem
@@ -243,7 +244,7 @@ A classical computer must test both 0 and 1 as inputs, so it requires two querie
 
 ### Quantum computer
 
-As you might expect, the answer is one. To see why, we need a few more concepts.
+The answer is one. To see why, we need a few more concepts.
 
 #### Hadamard gate
 
@@ -356,7 +357,7 @@ Starting from \\(\\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}\\), follow the arrows 
 
 #### non-reversible matrix
 
-Earlier I mentioned that quantum computers cannot multiply by non-reversible matrices. Among the 1-bit operations, Constant-0 and Constant-1 are non-reversible. To handle these in quantum computing, we use two qbits.
+Among the 1-bit operations, Constant-0 and Constant-1 are non-reversible. To handle them, we use two qbits.
 
 <img src="/assets/images/quantum_non_reversible.png?style=centerme" width=45%>
 
@@ -505,7 +506,7 @@ So the computation proceeds as shown below, and just like Identity, the final re
 <img src="/assets/images/quantum_bb_negation.png?style=centerme" width=80% alt="Input' and Output' when BB is Negation">
 
 
-In summary, given the right circuit design, a quantum computer only needs one measurement to determine whether BB is constant or balanced.
+Given the right circuit design, a quantum computer only needs one measurement to determine whether BB is constant or balanced.
 
 
 ## Entanglement
@@ -521,8 +522,7 @@ The CNOT gate in the Deutsch-Jozsa circuit hints at something deeper. When certa
 \\end{pmatrix}
 \\)
 is an entangled qbit state. It looks similar to a product state, but differs in one crucial way.
-As explained above, a product state can be factored into individual qbits. An entangled state cannot.
-(If the product state of two qbits **cannot be factored**, they are said to be **entangled**.)
+A product state can be factored into individual qbits. An entangled state cannot.
 Because of this, an entangled qbit pair behaves as a single unit -- measuring part of it immediately tells you the state of the rest.
 
 Proving that
