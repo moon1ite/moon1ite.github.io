@@ -26,8 +26,9 @@ Each question is an edge case. Getting one wrong isn't just bad service — a ha
 
 But even accurate answers weren't enough. The job was conversion — turning that anxious inquiry into a patient who actually walks through the door. Every rule we wrote implied ten more we hadn't thought to write. The gap never closed.
 
-Coding agents already ship features[^1]. Design tools generate layouts from prompts. Customer support looks like the obvious next step — text-based work, recognizable patterns[^2]. In 2011, Gartner predicted that by 2020, customers would manage 85% of their relationship with an enterprise without interacting with a human[^3]. Fifteen years later, the job still exists.
 <!--more-->
+
+Coding agents already ship features[^1]. Design tools generate layouts from prompts. Customer support looks like the obvious next step — text-based work, recognizable patterns[^2]. In 2011, Gartner predicted that by 2020, customers would manage 85% of their relationship with an enterprise without interacting with a human[^3]. Fifteen years later, the job still exists.
 
 ## The easy jobs are hard
 
