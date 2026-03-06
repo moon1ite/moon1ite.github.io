@@ -117,7 +117,7 @@ feed:
 # hexo-katex
 # https://github.com/thcd/hexo-katex
 pandoc:
-  mathEngine: katex
+  mathEngine: mathjax
 katex:
   css: false
   throw_on_error: false
