@@ -16,6 +16,14 @@
     </url>
 
     <url>
+        <loc>https://www.thespacemoon.com/2026/02/24/basics-of-quantum-computing-en/</loc>
+        <lastmod>2026-02-23T15:00:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://www.thespacemoon.com/2026/02/22/the-shrinking-moat/</loc>
         <lastmod>2026-02-22T00:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -66,14 +74,6 @@
     <url>
         <loc>https://www.thespacemoon.com/2020/05/28/korean-hate-speech-dataset/</loc>
         <lastmod>2020-05-28T12:00:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.thespacemoon.com/2019/11/07/basics-of-quantum-computing-en/</loc>
-        <lastmod>2019-11-06T15:07:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

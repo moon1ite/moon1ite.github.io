@@ -34,47 +34,221 @@
       window.addEventListener('hashchange', switchTab, false);
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/feed.xml" title="Space Moon" type="application/atom+xml">
-</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/space_moon.png" alt="Space Moon" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/moon1ite"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-9-tablet is-9-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time datetime="2026-02-28T00:00:00.000Z" title="2/28/2026, 9:00:00 AM">2026-02-28</time></span><span class="level-item"><a class="link-muted" href="/categories/Startup/">Startup</a></span><span class="level-item">8 minutes read (About 1257 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">Customer Support Looks Easy. That&#039;s Why AI Can&#039;t Crack It.</h1><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>At softly, we tried to automate customer support for clinics. The AI part worked — FAQs, multi-step lookups, even reasoning about clinic policies. The support part didn’t.</p>
-<p>People don’t message a clinic to ask what’s on the website. They want someone who knows the things the website doesn’t say — can this procedure fix <em>my</em> specific case, will it hurt more than last time, if I’m combining two procedures which order matters — and who can solve their problem right now.</p>
-<p>Each question is an edge case. Getting one wrong isn’t just bad service — a hallucinated answer about a procedure is dangerous. Generalization and hallucination come from the same place.</p>
-<p>But even accurate answers weren’t enough. The job was conversion — turning that anxious inquiry into a patient who actually walks through the door. Every rule we wrote implied ten more we hadn’t thought to write. The gap never closed.</p>
-<p>Coding agents already ship features<sup id="fnref:1"><a href="#fn:1" rel="footnote">&lt;span class=“hint–top hint–error hint–medium hint–rounded hint–bounce” aria-label=&quot;<a target="_blank" rel="external nofollow noopener noreferrer" href="https://techcrunch.com/2026/02/25/anthropic-acquires-vercept-ai-startup-agents-computer-use-founders-investors/">“Anthropic acquires computer-use AI startup Vercept.”</a> TechCrunch, February 2026.<br>
-“&gt;[1]</a></sup>. Design tools generate layouts from prompts. Customer support looks like the obvious next step — text-based work, recognizable patterns<sup id="fnref:2"><a href="#fn:2" rel="footnote">&lt;span class=“hint–top hint–error hint–medium hint–rounded hint–bounce” aria-label=”<a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.anthropic.com/research/measuring-agent-autonomy">“Measuring AI Agent Autonomy.”</a> Anthropic, 2026.<br>
-&quot;&gt;[2]</a></sup>. In 2011, Gartner predicted that by 2020, customers would manage 85% of their relationship with an enterprise without interacting with a human<sup id="fnref:3"><a href="#fn:3" rel="footnote">&lt;span class=“hint–top hint–error hint–medium hint–rounded hint–bounce” aria-label=&quot;Gartner. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.gartner.com/imagesrv/summits/docs/na/customer-360/C360_2011_brochure_FINAL.pdf">“Gartner Customer 360 Summit 2011: CRM Strategies and Technologies to Understand, Grow and Manage Customer Experiences.”</a> Gartner, 2011.<br>
-&quot;&gt;[3]</a></sup>. Fifteen years later, the job still exists.</p>
-<span id="more"></span>
-<h2 id="The-easy-jobs-are-hard">The easy jobs are hard</h2>
-<p>In 1988, Hans Moravec noticed something strange: the tasks easiest for humans — perception, social judgment, reading people’s motivations — are hardest for machines<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Moravec, H. [*Mind Children: The Future of Robot and Human Intelligence*](https://doi.org/10.2307/j.ctvbj7j1x). Harvard University Press, 1988.
-">[4]</span></a></sup>. A billion years of evolution encoded these skills deep in the brain. Reasoning is the thin veneer on top — which is why machines learned it first. Our bot could reason through multi-step insurance lookups. It couldn’t tell when a patient was too scared to ask what they actually wanted.</p>
-<p>Behind every message was context the bot never saw — when they messaged, what marketing brought them in, their nationality, whether they were planning travel for the procedure. A human agent reads all of this without thinking — and knows what to say to get the patient through the door. Not the answer to the question they asked. The thing that was actually stopping them from booking. The bot sees text.</p>
-<h2 id="Who-closes-the-loop">Who closes the loop</h2>
-<p>Moravec tells you what’s hard, but difficulty doesn’t determine the order of automation<sup id="fnref:5"><a href="#fn:5" rel="footnote">&lt;span class=“hint–top hint–error hint–medium hint–rounded hint–bounce” aria-label=&quot;Schaal (2025) quantified Moravec’s Paradox across 19,000 O*NET tasks: <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2510.13369">arXiv:2510.13369</a>. See also OpenAI, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2510.04374">“GDPval”</a> (arXiv:2510.04374, 2025) and <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.anthropic.com/research/anthropic-economic-index-january-2026-report">“Anthropic Economic Index, January 2026 Report.”</a><br>
-&quot;&gt;[5]</a></sup>. What matters is who judges the output.</p>
-<p><strong>Closed</strong> problems fall first — coding, math — where the answer checks itself. Code compiles or it doesn’t. The proof holds or it doesn’t.</p>
-<p><strong>Semi-closed</strong> problems follow — design, research, marketing. Human-in-the-loop works because one person controls the whole cycle: produce the work, review it, ship it.</p>
-<p>Customer support is <strong>open</strong>. The worker doesn’t close the loop — the customer does. They start it. They judge it. We couldn’t tell if our bot’s response was right until the patient didn’t book.</p>
-<p>Every workflow where the user and the judge are the same person can be solved incrementally: first assist the human, then automate.</p>
-<p>But the core of customer support — conversion, trust, reading the patient — is judged by the customer, not the worker. Different people, different incentives. The customer has no reason to give feedback — so the loop never closes, and the copilot never improves on the work that matters.</p>
-<h2 id="Why-training-can’t-close-the-gap">Why training can’t close the gap</h2>
-<h3 id="No-one-wrote-it-down">No one wrote it down</h3>
-<p>In other jobs, knowledge is documented and managed by the worker — code has docs, designs have style guides, research has published methods. The knowledge is explicit, so it transfers to machines.</p>
-<p>In customer support, the critical knowledge was never written down. The clinic staff who converted the most patients couldn’t explain how they did it. “Experience.” “Intuition.” “I just read people.” That’s Polanyi’s Paradox: we know more than we can tell<sup id="fnref:6"><a href="#fn:6" rel="footnote">&lt;span class=“hint–top hint–error hint–medium hint–rounded hint–bounce” aria-label=&quot;Autor. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.nber.org/papers/w20485">“Polanyi’s Paradox and the Shape of Employment Growth.”</a> NBER Working Paper 20485, 2014.<br>
-&quot;&gt;[6]</a></sup>.</p>
-<p>LLMs have cracked much of what can be articulated — abstract reasoning, procedural know-how. But embodied social knowledge — the kind built from reading people, not reading about them — doesn’t make it into a text corpus. A smile, a pause, the instinct to follow up differently based on tone: none of it was ever written down<sup id="fnref:7"><a href="#fn:7" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Lu (2025) found LLMs capture abstract and procedural tacit knowledge but not embodied knowledge. [Review of Austrian Economics](https://link.springer.com/article/10.1007/s11138-025-00710-5). Xu et al. (2025) tested 4,442 human concepts and found LLMs barely register sensory and motor features. [Nature Human Behaviour](https://www.nature.com/articles/s41562-025-02203-8).
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/space_moon.png" alt="Space Moon" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/moon1ite"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-9-tablet is-9-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time datetime="2026-02-28T00:00:00.000Z" title="2/28/2026, 9:00:00 AM">2026-02-28</time></span><span class="level-item"><a class="link-muted" href="/categories/Startup/">Startup</a></span><span class="level-item">8 minutes read (About 1257 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">Customer Support Looks Easy. That&#039;s Why AI Can&#039;t Crack It.</h1><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>At softly, we tried to automate customer support for clinics. The AI
+part worked — FAQs, multi-step lookups, even reasoning about clinic
+policies. The support part didn't.</p>
+<p>People don't message a clinic to ask what's on the website. They want
+someone who knows the things the website doesn't say — can this
+procedure fix <em>my</em> specific case, will it hurt more than last
+time, if I'm combining two procedures which order matters — and who can
+solve their problem right now.</p>
+<p>Each question is an edge case. Getting one wrong isn't just bad
+service — a hallucinated answer about a procedure is dangerous.
+Generalization and hallucination come from the same place.</p>
+<p>But even accurate answers weren't enough. The job was conversion —
+turning that anxious inquiry into a patient who actually walks through
+the door. Every rule we wrote implied ten more we hadn't thought to
+write. The gap never closed.</p>
+<p>Coding agents already ship
+features<sup id="fnref:1"><a href="#fn:1" rel="footnote">&lt;span
+class="hint--top hint--error hint--medium hint--rounded hint--bounce"
+aria-label="<a target="_blank" rel="external nofollow noopener noreferrer" href="https://techcrunch.com/2026/02/25/anthropic-acquires-vercept-ai-startup-agents-computer-use-founders-investors/">"Anthropic
+acquires computer-use AI startup Vercept."</a> TechCrunch, February
+2026. "&gt;[1]</a></sup>. Design tools generate layouts from
+prompts. Customer support looks like the obvious next step — text-based
+work, recognizable
+patterns<sup id="fnref:2"><a href="#fn:2" rel="footnote">&lt;span
+class="hint--top hint--error hint--medium hint--rounded hint--bounce"
+aria-label="<a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.anthropic.com/research/measuring-agent-autonomy">"Measuring
+AI Agent Autonomy."</a> Anthropic, 2026. "&gt;[2]</a></sup>. In
+2011, Gartner predicted that by 2020, customers would manage 85% of
+their relationship with an enterprise without interacting with a
+human<sup id="fnref:3"><a href="#fn:3" rel="footnote">&lt;span
+class="hint--top hint--error hint--medium hint--rounded hint--bounce"
+aria-label="Gartner. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.gartner.com/imagesrv/summits/docs/na/customer-360/C360_2011_brochure_FINAL.pdf">"Gartner
+Customer 360 Summit 2011: CRM Strategies and Technologies to Understand,
+Grow and Manage Customer Experiences."</a> Gartner, 2011.
+"&gt;[3]</a></sup>. Fifteen years later, the job still exists.
+<span id="more"></span></p>
+<h2 id="the-easy-jobs-are-hard">The easy jobs are hard</h2>
+<p>In 1988, Hans Moravec noticed something strange: the tasks easiest
+for humans — perception, social judgment, reading people's motivations —
+are hardest for
+machines<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Moravec, H. [*Mind Children: The Future of Robot and Human Intelligence*](https://doi.org/10.2307/j.ctvbj7j1x). Harvard University Press, 1988.
+">[4]</span></a></sup>. A billion years of evolution encoded these
+skills deep in the brain. Reasoning is the thin veneer on top — which is
+why machines learned it first. Our bot could reason through multi-step
+insurance lookups. It couldn't tell when a patient was too scared to ask
+what they actually wanted.</p>
+<p>Behind every message was context the bot never saw — when they
+messaged, what marketing brought them in, their nationality, whether
+they were planning travel for the procedure. A human agent reads all of
+this without thinking — and knows what to say to get the patient through
+the door. Not the answer to the question they asked. The thing that was
+actually stopping them from booking. The bot sees text.</p>
+<h2 id="who-closes-the-loop">Who closes the loop</h2>
+<p>Moravec tells you what's hard, but difficulty doesn't determine the
+order of
+automation<sup id="fnref:5"><a href="#fn:5" rel="footnote">&lt;span
+class="hint--top hint--error hint--medium hint--rounded hint--bounce"
+aria-label="Schaal (2025) quantified Moravec's Paradox across 19,000
+O*NET tasks: <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2510.13369">arXiv:2510.13369</a>. See also
+OpenAI, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2510.04374">"GDPval"</a>
+(arXiv:2510.04374, 2025) and <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.anthropic.com/research/anthropic-economic-index-january-2026-report">"Anthropic
+Economic Index, January 2026 Report."</a> "&gt;[5]</a></sup>.
+What matters is who judges the output.</p>
+<p><strong>Closed</strong> problems fall first — coding, math — where
+the answer checks itself. Code compiles or it doesn't. The proof holds
+or it doesn't.</p>
+<p><strong>Semi-closed</strong> problems follow — design, research,
+marketing. Human-in-the-loop works because one person controls the whole
+cycle: produce the work, review it, ship it.</p>
+<p>Customer support is <strong>open</strong>. The worker doesn't close
+the loop — the customer does. They start it. They judge it. We couldn't
+tell if our bot's response was right until the patient didn't book.</p>
+<p>Every workflow where the user and the judge are the same person can
+be solved incrementally: first assist the human, then automate.</p>
+<p>But the core of customer support — conversion, trust, reading the
+patient — is judged by the customer, not the worker. Different people,
+different incentives. The customer has no reason to give feedback — so
+the loop never closes, and the copilot never improves on the work that
+matters.</p>
+<h2 id="why-training-cant-close-the-gap">Why training can't close the
+gap</h2>
+<h3 id="no-one-wrote-it-down">No one wrote it down</h3>
+<p>In other jobs, knowledge is documented and managed by the worker —
+code has docs, designs have style guides, research has published
+methods. The knowledge is explicit, so it transfers to machines.</p>
+<p>In customer support, the critical knowledge was never written down.
+The clinic staff who converted the most patients couldn't explain how
+they did it. "Experience." "Intuition." "I just read people." That's
+Polanyi's Paradox: we know more than we can
+tell<sup id="fnref:6"><a href="#fn:6" rel="footnote">&lt;span
+class="hint--top hint--error hint--medium hint--rounded hint--bounce"
+aria-label="Autor. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.nber.org/papers/w20485">"Polanyi's Paradox and the
+Shape of Employment Growth."</a> NBER Working Paper 20485, 2014.
+"&gt;[6]</a></sup>.</p>
+<p>LLMs have cracked much of what can be articulated — abstract
+reasoning, procedural know-how. But embodied social knowledge — the kind
+built from reading people, not reading about them — doesn't make it into
+a text corpus. A smile, a pause, the instinct to follow up differently
+based on tone: none of it was ever written
+down<sup id="fnref:7"><a href="#fn:7" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="Lu (2025) found LLMs capture abstract and procedural tacit knowledge but not embodied knowledge. [Review of Austrian Economics](https://link.springer.com/article/10.1007/s11138-025-00710-5). Xu et al. (2025) tested 4,442 human concepts and found LLMs barely register sensory and motor features. [Nature Human Behaviour](https://www.nature.com/articles/s41562-025-02203-8).
 ">[7]</span></a></sup>.</p>
-<h3 id="The-reward-model-optimizes-for-the-wrong-thing">The reward model optimizes for the wrong thing</h3>
-<p>RLHF trains a reward model from annotator preferences — a proxy for “good.” This proxy is subject to Goodhart’s Law: optimize hard enough against it, and it diverges from the real objective. For coding, the divergence self-corrects — bad code fails visibly, so annotator judgments track reality.</p>
-<p>For customer support, “helpful” can’t be annotated in isolation. Whether a response is good depends on the product, the service, the clinic’s positioning — context no annotator has. So they judge what <em>sounds</em> helpful. Both humans and preference models systematically prefer agreeable responses over correct ones<sup id="fnref:8"><a href="#fn:8" rel="footnote">&lt;span class=“hint–top hint–error hint–medium hint–rounded hint–bounce” aria-label=&quot;Perez et al. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2310.13548">“Towards Understanding Sycophancy in Language Models.”</a> ICLR 2024.<br>
-&quot;&gt;[8]</a></sup> — and RLHF amplifies this bias as a first-order effect, not a side effect<sup id="fnref:9"><a href="#fn:9" rel="footnote">&lt;span class=“hint–top hint–error hint–medium hint–rounded hint–bounce” aria-label=&quot;Shapira et al. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2602.01002">“How RLHF Amplifies Sycophancy.”</a> arXiv:2602.01002, 2026. See also Casper et al. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2307.15217">“Open Problems and Fundamental Limitations of RLHF.”</a> 2023.<br>
-&quot;&gt;[9]</a></sup>. More training makes it worse, not better.</p>
-<p>Customer support succeeds when a patient books — or comes back. The reward model can’t measure retention. It optimizes for pleasant. This isn’t a bug — it’s what the math guarantees.</p>
-<h2 id="Wrong-question">Wrong question</h2>
-<p>CS won’t be automated away. It’ll be shipped away.</p>
-<p>Building is getting cheaper. Coding agents already ship features — a recurring CS ticket is now a prompt away from becoming a product fix. At some point, fixing the thing beats routing around it.</p>
-<p>Products are already doing this. Onboarding that anticipates confusion prevents tickets from being filed. In-product assistants answer the FAQ before anyone reaches a human. Every feature that fixes a recurring problem removes a class of questions permanently.</p>
-<p>Stripe is a clean example. “Why did my charge fail?” used to generate support tickets. Now the dashboard surfaces the reason directly — card declined, fraud flag, expired card — before anyone reaches a human. The ticket class disappeared. Not because a bot handled it. Because the product made the answer obvious.</p>
-<p>As building gets cheaper, more ticket classes disappear the same way. The queue doesn’t shrink because CS gets more efficient. It shrinks because there’s less to handle.</p>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://techcrunch.com/2026/02/25/anthropic-acquires-vercept-ai-startup-agents-computer-use-founders-investors/">&quot;Anthropic acquires computer-use AI startup Vercept.&quot;</a> TechCrunch, February 2026.<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.anthropic.com/research/measuring-agent-autonomy">&quot;Measuring AI Agent Autonomy.&quot;</a> Anthropic, 2026.<a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Gartner. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.gartner.com/imagesrv/summits/docs/na/customer-360/C360_2011_brochure_FINAL.pdf">&quot;Gartner Customer 360 Summit 2011: CRM Strategies and Technologies to Understand, Grow and Manage Customer Experiences.&quot;</a> Gartner, 2011.<a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Moravec, H. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://doi.org/10.2307/j.ctvbj7j1x"><em>Mind Children: The Future of Robot and Human Intelligence</em></a>. Harvard University Press, 1988.<a href="#fnref:4" rev="footnote"> ↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Schaal (2025) quantified Moravec's Paradox across 19,000 O*NET tasks: <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2510.13369">arXiv:2510.13369</a>. See also OpenAI, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2510.04374">&quot;GDPval&quot;</a> (arXiv:2510.04374, 2025) and <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.anthropic.com/research/anthropic-economic-index-january-2026-report">&quot;Anthropic Economic Index, January 2026 Report.&quot;</a><a href="#fnref:5" rev="footnote"> ↩</a></span></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">6.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Autor. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.nber.org/papers/w20485">&quot;Polanyi's Paradox and the Shape of Employment Growth.&quot;</a> NBER Working Paper 20485, 2014.<a href="#fnref:6" rev="footnote"> ↩</a></span></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">7.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Lu (2025) found LLMs capture abstract and procedural tacit knowledge but not embodied knowledge. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://link.springer.com/article/10.1007/s11138-025-00710-5">Review of Austrian Economics</a>. Xu et al. (2025) tested 4,442 human concepts and found LLMs barely register sensory and motor features. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.nature.com/articles/s41562-025-02203-8">Nature Human Behaviour</a>.<a href="#fnref:7" rev="footnote"> ↩</a></span></li><li id="fn:8"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">8.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Perez et al. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2310.13548">&quot;Towards Understanding Sycophancy in Language Models.&quot;</a> ICLR 2024.<a href="#fnref:8" rev="footnote"> ↩</a></span></li><li id="fn:9"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">9.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Shapira et al. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2602.01002">&quot;How RLHF Amplifies Sycophancy.&quot;</a> arXiv:2602.01002, 2026. See also Casper et al. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2307.15217">&quot;Open Problems and Fundamental Limitations of RLHF.&quot;</a> 2023.<a href="#fnref:9" rev="footnote"> ↩</a></span></li></ol></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/AI/">AI</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2026/02/22/the-shrinking-moat/"><span class="level-item">The Shrinking Moat</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card" id="comments"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+<h3 id="the-reward-model-optimizes-for-the-wrong-thing">The reward model
+optimizes for the wrong thing</h3>
+<p>RLHF trains a reward model from annotator preferences — a proxy for
+"good." This proxy is subject to Goodhart's Law: optimize hard enough
+against it, and it diverges from the real objective. For coding, the
+divergence self-corrects — bad code fails visibly, so annotator
+judgments track reality.</p>
+<p>For customer support, "helpful" can't be annotated in isolation.
+Whether a response is good depends on the product, the service, the
+clinic's positioning — context no annotator has. So they judge what
+<em>sounds</em> helpful. Both humans and preference models
+systematically prefer agreeable responses over correct
+ones<sup id="fnref:8"><a href="#fn:8" rel="footnote">&lt;span
+class="hint--top hint--error hint--medium hint--rounded hint--bounce"
+aria-label="Perez et al. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2310.13548">"Towards Understanding
+Sycophancy in Language Models."</a> ICLR 2024. "&gt;[8]</a></sup>
+— and RLHF amplifies this bias as a first-order effect, not a side
+effect<sup id="fnref:9"><a href="#fn:9" rel="footnote">&lt;span
+class="hint--top hint--error hint--medium hint--rounded hint--bounce"
+aria-label="Shapira et al. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2602.01002">"How RLHF Amplifies
+Sycophancy."</a> arXiv:2602.01002, 2026. See also Casper et al. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2307.15217">"Open Problems and Fundamental
+Limitations of RLHF."</a> 2023. "&gt;[9]</a></sup>. More training
+makes it worse, not better.</p>
+<p>Customer support succeeds when a patient books — or comes back. The
+reward model can't measure retention. It optimizes for pleasant. This
+isn't a bug — it's what the math guarantees.</p>
+<h2 id="wrong-question">Wrong question</h2>
+<p>CS won't be automated away. It'll be shipped away.</p>
+<p>Building is getting cheaper. Coding agents already ship features — a
+recurring CS ticket is now a prompt away from becoming a product fix. At
+some point, fixing the thing beats routing around it.</p>
+<p>Products are already doing this. Onboarding that anticipates
+confusion prevents tickets from being filed. In-product assistants
+answer the FAQ before anyone reaches a human. Every feature that fixes a
+recurring problem removes a class of questions permanently.</p>
+<p>Stripe is a clean example. "Why did my charge fail?" used to generate
+support tickets. Now the dashboard surfaces the reason directly — card
+declined, fraud flag, expired card — before anyone reaches a human. The
+ticket class disappeared. Not because a bot handled it. Because the
+product made the answer obvious.</p>
+<p>As building gets cheaper, more ticket classes disappear the same way.
+The queue doesn't shrink because CS gets more efficient. It shrinks
+because there's less to handle.</p>
+<div id="footnotes">
+<hr>
+<div id="footnotelist">
+<ol style="list-style: none; padding-left: 0; margin-left: 40px">
+<li id="fn:1">
+<span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://techcrunch.com/2026/02/25/anthropic-acquires-vercept-ai-startup-agents-computer-use-founders-investors/">"Anthropic
+acquires computer-use AI startup Vercept."</a> TechCrunch, February
+2026.<a href="#fnref:1" rev="footnote"> ↩︎</a></span>
+</li>
+<li id="fn:2">
+<span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.anthropic.com/research/measuring-agent-autonomy">"Measuring
+AI Agent Autonomy."</a> Anthropic,
+2026.<a href="#fnref:2" rev="footnote"> ↩︎</a></span>
+</li>
+<li id="fn:3">
+<span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Gartner.
+<a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.gartner.com/imagesrv/summits/docs/na/customer-360/C360_2011_brochure_FINAL.pdf">"Gartner
+Customer 360 Summit 2011: CRM Strategies and Technologies to Understand,
+Grow and Manage Customer Experiences."</a> Gartner,
+2011.<a href="#fnref:3" rev="footnote"> ↩︎</a></span>
+</li>
+<li id="fn:4">
+<span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Moravec,
+H. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://doi.org/10.2307/j.ctvbj7j1x"><em>Mind Children: The
+Future of Robot and Human Intelligence</em></a>. Harvard University
+Press, 1988.<a href="#fnref:4" rev="footnote"> ↩︎</a></span>
+</li>
+<li id="fn:5">
+<span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Schaal
+(2025) quantified Moravec's Paradox across 19,000 O*NET tasks:
+<a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2510.13369">arXiv:2510.13369</a>. See
+also OpenAI, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2510.04374">"GDPval"</a>
+(arXiv:2510.04374, 2025) and
+<a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.anthropic.com/research/anthropic-economic-index-january-2026-report">"Anthropic
+Economic Index, January 2026
+Report."</a><a href="#fnref:5" rev="footnote"> ↩︎</a></span>
+</li>
+<li id="fn:6">
+<span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">6.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Autor.
+<a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.nber.org/papers/w20485">"Polanyi's Paradox and the
+Shape of Employment Growth."</a> NBER Working Paper 20485,
+2014.<a href="#fnref:6" rev="footnote"> ↩︎</a></span>
+</li>
+<li id="fn:7">
+<span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">7.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Lu
+(2025) found LLMs capture abstract and procedural tacit knowledge but
+not embodied knowledge.
+<a target="_blank" rel="external nofollow noopener noreferrer" href="https://link.springer.com/article/10.1007/s11138-025-00710-5">Review
+of Austrian Economics</a>. Xu et al. (2025) tested 4,442 human concepts
+and found LLMs barely register sensory and motor features.
+<a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.nature.com/articles/s41562-025-02203-8">Nature
+Human Behaviour</a>.<a href="#fnref:7" rev="footnote"> ↩︎</a></span>
+</li>
+<li id="fn:8">
+<span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">8.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Perez
+et al. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2310.13548">"Towards Understanding
+Sycophancy in Language Models."</a> ICLR
+2024.<a href="#fnref:8" rev="footnote"> ↩︎</a></span>
+</li>
+<li id="fn:9">
+<span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">9.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">Shapira
+et al. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2602.01002">"How RLHF Amplifies
+Sycophancy."</a> arXiv:2602.01002, 2026. See also Casper et al.
+<a target="_blank" rel="external nofollow noopener noreferrer" href="https://arxiv.org/abs/2307.15217">"Open Problems and
+Fundamental Limitations of RLHF."</a>
+2023.<a href="#fnref:9" rev="footnote"> ↩︎</a></span>
+</li>
+</ol>
+</div>
+</div>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/AI/">AI</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2026/02/24/basics-of-quantum-computing-en/"><span class="level-item">Hello World, Quantum Computing</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card" id="comments"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
             this.page.url = 'https://www.thespacemoon.com/2026/02/28/why-customer-support-will-be-the-last/';
             this.page.identifier = '/2026/02/28/why-customer-support-will-be-the-last/';
         };
@@ -83,7 +257,9 @@
             s.src = '//' + 'inmoonlight' + '.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
             (d.head || d.body).appendChild(s);
-        })();</script></div></div></div><div class="column column-left is-3-tablet is-3-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#The-easy-jobs-are-hard"><span class="level-left"><span class="level-item">1</span><span class="level-item">The easy jobs are hard</span></span></a></li><li><a class="level is-mobile" href="#Who-closes-the-loop"><span class="level-left"><span class="level-item">2</span><span class="level-item">Who closes the loop</span></span></a></li><li><a class="level is-mobile" href="#Why-training-can’t-close-the-gap"><span class="level-left"><span class="level-item">3</span><span class="level-item">Why training can’t close the gap</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#No-one-wrote-it-down"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">No one wrote it down</span></span></a></li><li><a class="level is-mobile" href="#The-reward-model-optimizes-for-the-wrong-thing"><span class="level-left"><span class="level-item">3.2</span><span class="level-item">The reward model optimizes for the wrong thing</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Wrong-question"><span class="level-left"><span class="level-item">4</span><span class="level-item">Wrong question</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Startup/"><span class="level-start"><span class="level-item">Startup</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Tech/"><span class="level-start"><span class="level-item">Tech</span></span><span class="level-end"><span class="level-item tag">10</span></span></a><ul><li><a class="level is-mobile" href="/categories/Tech/Engineering/"><span class="level-start"><span class="level-item">Engineering</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Tech/ML/"><span class="level-start"><span class="level-item">ML</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Tech/Quantum-Computing/"><span class="level-start"><span class="level-item">Quantum Computing</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time datetime="2026-02-28T00:00:00.000Z">2026-02-28</time></p><p class="title"><a href="/2026/02/28/why-customer-support-will-be-the-last/">Customer Support Looks Easy. That&#039;s Why AI Can&#039;t Crack It.</a></p><p class="categories"><a href="/categories/Startup/">Startup</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time datetime="2026-02-22T00:00:00.000Z">2026-02-22</time></p><p class="title"><a href="/2026/02/22/the-shrinking-moat/">The Shrinking Moat</a></p><p class="categories"><a href="/categories/Startup/">Startup</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time datetime="2025-07-20T00:00:00.000Z">2025-07-20</time></p><p class="title"><a href="/2025/07/20/joining-healingpaper/">Joining HealingPaper</a></p><p class="categories"><a href="/categories/Startup/">Startup</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time datetime="2021-07-10T16:03:00.000Z">2021-07-11</time></p><p class="title"><a href="/2021/07/11/git-merge-strategies/">Git의 다양한 머지 전략 비교 - 우리 팀은 어떤 전략을 도입해야 할까?</a></p><p class="categories"><a href="/categories/Tech/">Tech</a> / <a href="/categories/Tech/Engineering/">Engineering</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time datetime="2021-03-02T19:22:00.000Z">2021-03-03</time></p><p class="title"><a href="/2021/03/03/pytorch-view-reshape-transpose/">PyTorch의 view, transpose, reshape 함수의 차이점 이해하기</a></p><p class="categories"><a href="/categories/Tech/">Tech</a> / <a href="/categories/Tech/Engineering/">Engineering</a></p></div></article></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/space_moon.png" alt="Space Moon" height="28"></a><p class="is-size-7"><span>&copy; 2026 Jihyung Moon</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+        })();</script></div></div></div><div class="column column-left is-3-tablet is-3-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#the-easy-jobs-are-hard"><span class="level-left"><span class="level-item">1</span><span class="level-item">The easy jobs are hard</span></span></a></li><li><a class="level is-mobile" href="#who-closes-the-loop"><span class="level-left"><span class="level-item">2</span><span class="level-item">Who closes the loop</span></span></a></li><li><a class="level is-mobile" href="#why-training-cant-close-the-gap"><span class="level-left"><span class="level-item">3</span><span class="level-item">Why training can&#039;t close the
+gap</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#no-one-wrote-it-down"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">No one wrote it down</span></span></a></li><li><a class="level is-mobile" href="#the-reward-model-optimizes-for-the-wrong-thing"><span class="level-left"><span class="level-item">3.2</span><span class="level-item">The reward model
+optimizes for the wrong thing</span></span></a></li></ul></li><li><a class="level is-mobile" href="#wrong-question"><span class="level-left"><span class="level-item">4</span><span class="level-item">Wrong question</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Startup/"><span class="level-start"><span class="level-item">Startup</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Tech/"><span class="level-start"><span class="level-item">Tech</span></span><span class="level-end"><span class="level-item tag">10</span></span></a><ul><li><a class="level is-mobile" href="/categories/Tech/Engineering/"><span class="level-start"><span class="level-item">Engineering</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Tech/ML/"><span class="level-start"><span class="level-item">ML</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Tech/Quantum-Computing/"><span class="level-start"><span class="level-item">Quantum Computing</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time datetime="2026-02-28T00:00:00.000Z">2026-02-28</time></p><p class="title"><a href="/2026/02/28/why-customer-support-will-be-the-last/">Customer Support Looks Easy. That&#039;s Why AI Can&#039;t Crack It.</a></p><p class="categories"><a href="/categories/Startup/">Startup</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time datetime="2026-02-23T15:00:00.000Z">2026-02-24</time></p><p class="title"><a href="/2026/02/24/basics-of-quantum-computing-en/">Hello World, Quantum Computing</a></p><p class="categories"><a href="/categories/Tech/">Tech</a> / <a href="/categories/Tech/Quantum-Computing/">Quantum Computing</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time datetime="2026-02-22T00:00:00.000Z">2026-02-22</time></p><p class="title"><a href="/2026/02/22/the-shrinking-moat/">The Shrinking Moat</a></p><p class="categories"><a href="/categories/Startup/">Startup</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time datetime="2025-07-20T00:00:00.000Z">2025-07-20</time></p><p class="title"><a href="/2025/07/20/joining-healingpaper/">Joining HealingPaper</a></p><p class="categories"><a href="/categories/Startup/">Startup</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time datetime="2021-07-10T16:03:00.000Z">2021-07-11</time></p><p class="title"><a href="/2021/07/11/git-merge-strategies/">Git의 다양한 머지 전략 비교 - 우리 팀은 어떤 전략을 도입해야 할까?</a></p><p class="categories"><a href="/categories/Tech/">Tech</a> / <a href="/categories/Tech/Engineering/">Engineering</a></p></div></article></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/space_moon.png" alt="Space Moon" height="28"></a><p class="is-size-7"><span>&copy; 2026 Jihyung Moon</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="external nofollow noopener noreferrer" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

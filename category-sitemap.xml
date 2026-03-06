@@ -15,14 +15,21 @@
     </url>
 
     <url>
-        <loc>https://www.thespacemoon.com/categories/Tech/Engineering/</loc>
-        <lastmod>2021-07-10T16:03:00.000Z</lastmod>
+        <loc>https://www.thespacemoon.com/categories/Tech/Quantum-Computing/</loc>
+        <lastmod>2026-02-23T15:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.thespacemoon.com/categories/Tech/</loc>
+        <lastmod>2026-02-23T15:00:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.thespacemoon.com/categories/Tech/Engineering/</loc>
         <lastmod>2021-07-10T16:03:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -31,13 +38,6 @@
     <url>
         <loc>https://www.thespacemoon.com/categories/Tech/ML/</loc>
         <lastmod>2020-05-28T12:00:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.thespacemoon.com/categories/Tech/Quantum-Computing/</loc>
-        <lastmod>2019-11-06T15:07:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
