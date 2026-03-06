@@ -65,27 +65,27 @@ Qbit은 언제나 다음의 조건을 만족시킨다.
 따라서 아래의 예시들은 qbit에 해당된다.
 
 
-\\[
-\\begin{pmatrix}
-\\frac{1}{\\sqrt{2}} \\\\
-\\frac{1}{\\sqrt{2}}
-\\end{pmatrix}
-\\hspace{10pt}
-\\begin{pmatrix}
-\\frac{1}{2} \\\\
-\\frac{\\sqrt{3}}{2}
-\\end{pmatrix}
-\\hspace{10pt}
-\\begin{pmatrix}
-1 \\\\
+$$
+\begin{pmatrix}
+\frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}}
+\end{pmatrix}
+\hspace{10pt}
+\begin{pmatrix}
+\frac{1}{2} \\
+\frac{\sqrt{3}}{2}
+\end{pmatrix}
+\hspace{10pt}
+\begin{pmatrix}
+1 \\
 0
-\\end{pmatrix}
-\\hspace{10pt}
-\\begin{pmatrix}
-0 \\\\
+\end{pmatrix}
+\hspace{10pt}
+\begin{pmatrix}
+0 \\
 -1
-\\end{pmatrix}
-\\]
+\end{pmatrix}
+$$
 
 그리고 이 모든 벡터들의 basis가 되는 \\(\\begin{pmatrix} 1 \\\\0 \\end{pmatrix}\\)과 \\(\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}\\)은 각각 \\(\\mid 0\\rangle\\)과 \\(\\mid 1\\rangle\\)이라는 특별한 기호로 정의한다.
 
@@ -96,10 +96,12 @@ Qbit은 언제나 다음의 조건을 만족시킨다.
 
 위에서 qbit이라고 언급했던 벡터 하나를 예시로 들어보자.
 
-\\[\\begin{pmatrix}
-\\frac{1}{\\sqrt{2}} \\\\
-\\frac{1}{\\sqrt{2}}
-\\end{pmatrix}\\]
+$$
+\begin{pmatrix}
+\frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}}
+\end{pmatrix}
+$$
 
 이 qbit은 \\(0\\) 혹은 \\(1\\)로 collapse될 확률이 \\(\\frac{1}{2}\\) ( \\(= || \\frac{1}{\\sqrt{2}} || ^2\\)) 이다.
 
@@ -123,24 +125,24 @@ Qbit은 언제나 다음의 조건을 만족시킨다.
 여러 개의 qbit을 나타내기 위해 Tensor product 개념이 필요하다.
 수학적으로 엄밀한 표현은 아니지만, n개의 qbit 연산을 표현하기 위해서는 아래의 표기 방식을 따르는 것이 좋다.
 
-\\[
-  \\binom{x\_0}{x\_1} \\otimes \\binom{y\_0}{y\_1} 
-= \\begin{pmatrix} x\_0  \\binom{y\_0}{y\_1} \\\\
-x\_1  \\binom{y\_0}{y\_1} \\end{pmatrix} 
-= \\begin{pmatrix} x\_0 y\_0 \\\\ x\_0 y\_1 \\\\ x\_1 y\_0 \\\\ x\_1 y\_1 \\end{pmatrix}
-\\]
+$$
+\binom{x\_0}{x\_1} \otimes \binom{y\_0}{y\_1} 
+= \begin{pmatrix} x\_0  \binom{y\_0}{y\_1} \\
+x\_1  \binom{y\_0}{y\_1} \end{pmatrix} 
+= \begin{pmatrix} x\_0 y\_0 \\ x\_0 y\_1 \\ x\_1 y\_0 \\ x\_1 y\_1 \end{pmatrix}
+$$
 
 이를 응용하면 2개, 3개의 qbit도 벡터처럼 표현할 수 있다.
 
-\\[
-|01\\rangle = \\binom{1}{0} \\otimes \\binom{0}{1} = \\begin{pmatrix}
-  0 \\\\ 1 \\\\ 0 \\\\ 0
-\\end{pmatrix}
-\\hspace{10pt}
-|100\\rangle = \\binom{0}{1} \\otimes \\binom{1}{0} \\otimes \\binom{1}{0} = \\begin{pmatrix}
-  0\\\\ 0\\\\0\\\\0 \\\\ 1 \\\\ 0 \\\\ 0 \\\\ 0
-\\end{pmatrix}
-\\]
+$$
+|01\rangle = \binom{1}{0} \otimes \binom{0}{1} = \begin{pmatrix}
+  0 \\ 1 \\ 0 \\ 0
+\end{pmatrix}
+\hspace{10pt}
+|100\rangle = \binom{0}{1} \otimes \binom{1}{0} \otimes \binom{1}{0} = \begin{pmatrix}
+  0\\ 0\\0\\0 \\ 1 \\ 0 \\ 0 \\ 0
+\end{pmatrix}
+$$
 
 이와 같이 tensor product의 결과로 표현된 벡터는 product state라고 한다. 여기서 우리는 \\(n\\)개 qbit의 product state 크기가 \\(2^n\\) 이라는 것을 알 수 있다.
 만약 
@@ -156,16 +158,16 @@ x\_1  \\binom{y\_0}{y\_1} \\end{pmatrix}
 
 Multiple qbits의 product state 또한 single qbit과 같은 성질을 만족시킨다.
 
-\\[
-\\binom{a}{b} \\otimes \\binom{c}{d} = 
-\\begin{pmatrix}
-  ac \\\\ ad \\\\ bc \\\\ bd
-\\end{pmatrix} 
-\\]
+$$
+\binom{a}{b} \otimes \binom{c}{d} = 
+\begin{pmatrix}
+  ac \\ ad \\ bc \\ bd
+\end{pmatrix}
+$$
 
-\\[
-  \\text{where, } ||ac||^2 + ||ad||^2 + ||bc||^2 + ||bd||^2 = 1
-\\]
+$$
+\text{where, } ||ac||^2 + ||ad||^2 + ||bc||^2 + ||bd||^2 = 1
+$$
 
 
 ### 1-bit operations
@@ -176,30 +178,30 @@ Multiple qbits의 product state 또한 single qbit과 같은 성질을 만족시
 
 각각의 연산은 matrix로 표현할 수 있다.
 
-\\[
-  \\text{Identity} = \\begin{pmatrix}
-1 & 0 \\\\ 
+$$
+\text{Identity} = \begin{pmatrix}
+1 & 0 \\ 
 0 & 1
-\\end{pmatrix}
-\\]
-\\[
-  \\text{Negation} = \\begin{pmatrix}
-0 & 1 \\\\ 
+\end{pmatrix}
+$$
+$$
+\text{Negation} = \begin{pmatrix}
+0 & 1 \\ 
 1 & 0
-\\end{pmatrix}
-\\]
-\\[
-  \\text{Constant-0} = \\begin{pmatrix}
-1 & 1 \\\\
+\end{pmatrix}
+$$
+$$
+\text{Constant-0} = \begin{pmatrix}
+1 & 1 \\
 0 & 0
-\\end{pmatrix}
-\\]
-\\[
-  \\text{Constant-1} = \\begin{pmatrix}
-0 & 0 \\\\ 
+\end{pmatrix}
+$$
+$$
+\text{Constant-1} = \begin{pmatrix}
+0 & 0 \\ 
 1 & 1
-\\end{pmatrix}
-\\]
+\end{pmatrix}
+$$
 
 <img src="/assets/images/1bit_matrix.png?style=centerme" width=70% alt="1-bit 연산의 matrix 표현">
 
@@ -212,14 +214,14 @@ CNOT 연산은 control bit와 target bit로 구성된 2-bit가 있을 때 contro
 
 마찬가지로 이 연산도 matrix로 표현할 수 있다.
 
-\\[
-  C = \\begin{pmatrix}
-1 & 0 & 0 & 0 \\\\ 
-0 & 1 & 0 & 0 \\\\ 
-0 & 0 & 0 & 1 \\\\ 
-0 & 0 & 1 & 0 \\\\ 
-\\end{pmatrix}
-\\]
+$$
+C = \begin{pmatrix}
+1 & 0 & 0 & 0 \\ 
+0 & 1 & 0 & 0 \\ 
+0 & 0 & 0 & 1 \\ 
+0 & 0 & 1 & 0 \\ 
+\end{pmatrix}
+$$
 
 <img src="/assets/images/CNOT_examples.png?style=centerme" width=60% alt="2-qbits에 적용한 CNOT 예시">
 
@@ -227,16 +229,16 @@ CNOT 연산은 control bit와 target bit로 구성된 2-bit가 있을 때 contro
 확률이 지배하는 양자 세계에서 deterministic한 연산을 하기 위해서는 matrix를 관측하지 않은 qbit에 곱하는 것이 유일한 방법이기 때문이다.
 아래의 예시에서 우리가 확신할 수 있는 정보는 qbit이 0과 1로 관측될 확률이 반대가 되었다는 것이다.
 
-\\[
-  \\begin{pmatrix}
-0 & 1 \\\\ 
+$$
+\begin{pmatrix}
+0 & 1 \\ 
 1 & 0
-\\end{pmatrix} \\begin{pmatrix}
-  \\frac{1}{2} \\\\ \\frac{\\sqrt{3}}{2} 
-\\end{pmatrix} = \\begin{pmatrix}
-  \\frac{\\sqrt{3}}{2} \\\\ \\frac{1}{2}
-\\end{pmatrix}
-\\]
+\end{pmatrix} \begin{pmatrix}
+  \frac{1}{2} \\ \frac{\sqrt{3}}{2} 
+\end{pmatrix} = \begin{pmatrix}
+  \frac{\sqrt{3}}{2} \\ \frac{1}{2}
+\end{pmatrix}
+$$
 
 
 항상 0 혹은 1로 관측되는 \\(\\mid0\\rangle\\)이나 \\(\\mid1\\rangle\\)을 쓰면 matrix 연산을 고집하지 않아도 되지만 이런 qbit만 사용할거라면 고전컴퓨터를 쓰면 그만이다.
@@ -265,99 +267,99 @@ CNOT 연산은 control bit와 target bit로 구성된 2-bit가 있을 때 contro
 
 앞서 언급된 적 있는 H gate이다.
 
-\\[
-  H = \\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} \\\\
-  \\frac{1}{\\sqrt{2}} & \\frac{-1}{\\sqrt{2}}
-\\end{pmatrix}
-\\]
+$$
+H = \begin{pmatrix}
+  \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+  \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}}
+\end{pmatrix}
+$$
 
 Hadamard gate는 0- 혹은 1-qbit을 받아서 0과 1을 같은 확률로 가지는 qbit으로 바꿔준다.
 
-\\[
-H\\mid0\\rangle = \\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} \\\\
-  \\frac{1}{\\sqrt{2}} & \\frac{-1}{\\sqrt{2}}
-\\end{pmatrix} \\begin{pmatrix}
-  1 \\\\ 0
-\\end{pmatrix} = \\begin{pmatrix}
-  \\frac{1}{\sqrt{2}} \\\\ \\frac{1}{\\sqrt{2}}
-\\end{pmatrix}
-\\]
+$$
+H\mid0\rangle = \begin{pmatrix}
+  \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+  \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}}
+\end{pmatrix} \begin{pmatrix}
+  1 \\ 0
+\end{pmatrix} = \begin{pmatrix}
+  \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
+\end{pmatrix}
+$$
 
-\\[
-H\\mid1\\rangle = \\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} \\\\
-  \\frac{1}{\\sqrt{2}} & \\frac{-1}{\\sqrt{2}}
-\\end{pmatrix} \\begin{pmatrix}
-  0 \\\\ 1
-\\end{pmatrix} = \\begin{pmatrix}
-  \\frac{1}{\sqrt{2}} \\\\ \\frac{-1}{\\sqrt{2}}
-\\end{pmatrix}
-\\]
+$$
+H\mid1\rangle = \begin{pmatrix}
+  \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+  \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}}
+\end{pmatrix} \begin{pmatrix}
+  0 \\ 1
+\end{pmatrix} = \begin{pmatrix}
+  \frac{1}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}}
+\end{pmatrix}
+$$
 
 Hadamard gate는 또 다른 중요한 성질이 있다. 0과 1을 같은 확률로 가지는 qbit을 다시 0- 과 1-qbit으로 돌려보낸다는 것이다.
 
-\\[
-\\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} \\\\
-  \\frac{1}{\\sqrt{2}} & \\frac{-1}{\\sqrt{2}}
-\\end{pmatrix} \\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} \\\\ \\frac{1}{\\sqrt{2}}
-\\end{pmatrix} = \\begin{pmatrix}
-  1 \\\\ 0
-\\end{pmatrix}
-\\]
+$$
+\begin{pmatrix}
+  \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+  \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}}
+\end{pmatrix} \begin{pmatrix}
+  \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
+\end{pmatrix} = \begin{pmatrix}
+  1 \\ 0
+\end{pmatrix}
+$$
 
-\\[
-\\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} \\\\
-  \\frac{1}{\\sqrt{2}} & \\frac{-1}{\\sqrt{2}}
-\\end{pmatrix} \\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} \\\\ \\frac{-1}{\\sqrt{2}}
-\\end{pmatrix} = \\begin{pmatrix}
-  0 \\\\ 1
-\\end{pmatrix}
-\\]
+$$
+\begin{pmatrix}
+  \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+  \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}}
+\end{pmatrix} \begin{pmatrix}
+  \frac{1}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}}
+\end{pmatrix} = \begin{pmatrix}
+  0 \\ 1
+\end{pmatrix}
+$$
 
 
 #### X gate
 
 X gate는 qbit의 위 아래를 바꿔준다.
 
-\\[
-  X = 
-\\begin{pmatrix}
-   0 & 1 \\\\
+$$
+X = 
+\begin{pmatrix}
+   0 & 1 \\
    1 & 0
-\\end{pmatrix}
-\\]
+\end{pmatrix}
+$$
 
-\\[
-\\begin{pmatrix}
-   0 & 1 \\\\
+$$
+\begin{pmatrix}
+   0 & 1 \\
    1 & 0
-\\end{pmatrix} 
-\\begin{pmatrix}
-  0 \\\\ 1
-\\end{pmatrix}
-= \\begin{pmatrix}
-  1 \\\\ 0
-\\end{pmatrix}
-\\]
+\end{pmatrix} 
+\begin{pmatrix}
+  0 \\ 1
+\end{pmatrix}
+= \begin{pmatrix}
+  1 \\ 0
+\end{pmatrix}
+$$
 
-\\[
-\\begin{pmatrix}
-   0 & 1 \\\\
+$$
+\begin{pmatrix}
+   0 & 1 \\
    1 & 0
-\\end{pmatrix} 
-\\begin{pmatrix}
-  \\frac{-1}{\\sqrt{2}} \\\\ \\frac{1}{\\sqrt{2}}
-\\end{pmatrix}
-= \\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} \\\\ \\frac{-1}{\\sqrt{2}}
-\\end{pmatrix}
-\\]
+\end{pmatrix} 
+\begin{pmatrix}
+  \frac{-1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
+\end{pmatrix}
+= \begin{pmatrix}
+  \frac{1}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}}
+\end{pmatrix}
+$$
 
 
 H gate와 X gate 연산을 이해하기 쉽게 표현하면 아래의 그림이 된다. 붉은색이 X gate, 노란색이 H gate 연산의 방향이다. 
@@ -447,45 +449,45 @@ Preprocessing을 거친 Input과 Output은
 \\)
 이므로 CNOT연산은 아래와 같이 표현할 수 있다.
 
-\\[
-C \\begin{pmatrix}
-  \\begin{pmatrix}
-    \\frac{1}{\\sqrt{2}} \\\\
-    \\frac{-1}{\\sqrt{2}}
-  \\end{pmatrix} \\otimes
-    \\begin{pmatrix}
-    \\frac{1}{\\sqrt{2}} \\\\
-    \\frac{-1}{\\sqrt{2}}
-  \\end{pmatrix}
-\\end{pmatrix} = C \\begin{pmatrix}
-  \\frac{1}{2} \\\\
-  \\frac{-1}{2} \\\\
-  \\frac{-1}{2} \\\\
-  \\frac{1}{2}
-\\end{pmatrix} = \\frac{1}{2} \\begin{pmatrix}
-  1 & 0 & 0 & 0 \\\\
-  0 & 1 & 0 & 0 \\\\
-  0 & 0 & 0 & 1 \\\\
-  0 & 0 & 1 & 0 \\\\
-\\end{pmatrix} \\begin{pmatrix}
-  1 \\\\
-  -1 \\\\
-  -1 \\\\
+$$
+C \begin{pmatrix}
+  \begin{pmatrix}
+    \frac{1}{\sqrt{2}} \\
+    \frac{-1}{\sqrt{2}}
+  \end{pmatrix} \otimes
+    \begin{pmatrix}
+    \frac{1}{\sqrt{2}} \\
+    \frac{-1}{\sqrt{2}}
+  \end{pmatrix}
+\end{pmatrix} = C \begin{pmatrix}
+  \frac{1}{2} \\
+  \frac{-1}{2} \\
+  \frac{-1}{2} \\
+  \frac{1}{2}
+\end{pmatrix} = \frac{1}{2} \begin{pmatrix}
+  1 & 0 & 0 & 0 \\
+  0 & 1 & 0 & 0 \\
+  0 & 0 & 0 & 1 \\
+  0 & 0 & 1 & 0 \\
+\end{pmatrix} \begin{pmatrix}
+  1 \\
+  -1 \\
+  -1 \\
   1
-\\end{pmatrix} = \\frac{1}{2} \\begin{pmatrix}
-  1 \\\\
-  -1 \\\\
-  1 \\\\
+\end{pmatrix} = \frac{1}{2} \begin{pmatrix}
+  1 \\
+  -1 \\
+  1 \\
   -1
-\\end{pmatrix} = \\begin{pmatrix}
-    \\frac{1}{\\sqrt{2}} \\\\
-    \\frac{1}{\\sqrt{2}}
-  \\end{pmatrix} \\otimes
-    \\begin{pmatrix}
-    \\frac{1}{\\sqrt{2}} \\\\
-    \\frac{-1}{\\sqrt{2}}
-  \\end{pmatrix}
-\\]
+\end{pmatrix} = \begin{pmatrix}
+    \frac{1}{\sqrt{2}} \\
+    \frac{1}{\sqrt{2}}
+  \end{pmatrix} \otimes
+    \begin{pmatrix}
+    \frac{1}{\sqrt{2}} \\
+    \frac{-1}{\sqrt{2}}
+  \end{pmatrix}
+$$
 
 즉 Input은 
 \\(
@@ -576,41 +578,41 @@ Entanlged qbit은 CNOT과 H gate를 통해 쉽게 생성할 수 있다.
 
 <img src="/assets/images/entanlge.png?style=centerme" width=50% alt="Entangled qbit">
 
-\\[
+$$
 CH\_1
-\\begin{pmatrix}
-  \\begin{pmatrix}
-    1 \\\\
+\begin{pmatrix}
+  \begin{pmatrix}
+    1 \\
     0
-  \\end{pmatrix} \\otimes \\begin{pmatrix}
-    1 \\\\
+  \end{pmatrix} \otimes \begin{pmatrix}
+    1 \\
     0
-  \\end{pmatrix}
-\\end{pmatrix} = C \\begin{pmatrix}
-  \\begin{pmatrix}
-    \\frac{1}{\\sqrt{2}} \\\\
-    \\frac{1}{\\sqrt{2}} 
-  \\end{pmatrix} \\otimes \\begin{pmatrix}
-    1 \\\\ 0
-  \\end{pmatrix}
-\\end{pmatrix} = 
-\\begin{pmatrix}
-  1 & 0 & 0 & 0 \\\\ 
-0 & 1 & 0 & 0 \\\\ 
-0 & 0 & 0 & 1 \\\\ 
-0 & 0 & 1 & 0 \\\\ 
-\\end{pmatrix} \\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} \\\\
-  0 \\\\
-  \\frac{1}{\\sqrt{2}} \\\\
+  \end{pmatrix}
+\end{pmatrix} = C \begin{pmatrix}
+  \begin{pmatrix}
+    \frac{1}{\sqrt{2}} \\
+    \frac{1}{\sqrt{2}} 
+  \end{pmatrix} \otimes \begin{pmatrix}
+    1 \\ 0
+  \end{pmatrix}
+\end{pmatrix} = 
+\begin{pmatrix}
+  1 & 0 & 0 & 0 \\ 
+0 & 1 & 0 & 0 \\ 
+0 & 0 & 0 & 1 \\ 
+0 & 0 & 1 & 0 \\ 
+\end{pmatrix} \begin{pmatrix}
+  \frac{1}{\sqrt{2}} \\
+  0 \\
+  \frac{1}{\sqrt{2}} \\
   0 
-\\end{pmatrix} = \\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} \\\\
-  0 \\\\
-  0 \\\\
-  \\frac{1}{\\sqrt{2}}
-\\end{pmatrix}
-\\]
+\end{pmatrix} = \begin{pmatrix}
+  \frac{1}{\sqrt{2}} \\
+  0 \\
+  0 \\
+  \frac{1}{\sqrt{2}}
+\end{pmatrix}
+$$
 
 만약 이후에 이런 게이트의 조합을 본다면 곧바로 'entanlge 되었군!' 이라고 생각하면 된다 :)
 

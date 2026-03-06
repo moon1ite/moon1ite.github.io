@@ -51,27 +51,27 @@ A qbit is the fundamental unit of quantum computation. It always satisfies the f
 So the following are all valid qbits:
 
 
-\\[
-\\begin{pmatrix}
-\\frac{1}{\\sqrt{2}} \\\\
-\\frac{1}{\\sqrt{2}}
-\\end{pmatrix}
-\\hspace{10pt}
-\\begin{pmatrix}
-\\frac{1}{2} \\\\
-\\frac{\\sqrt{3}}{2}
-\\end{pmatrix}
-\\hspace{10pt}
-\\begin{pmatrix}
-1 \\\\
+$$
+\begin{pmatrix}
+\frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}}
+\end{pmatrix}
+\hspace{10pt}
+\begin{pmatrix}
+\frac{1}{2} \\
+\frac{\sqrt{3}}{2}
+\end{pmatrix}
+\hspace{10pt}
+\begin{pmatrix}
+1 \\
 0
-\\end{pmatrix}
-\\hspace{10pt}
-\\begin{pmatrix}
-0 \\\\
+\end{pmatrix}
+\hspace{10pt}
+\begin{pmatrix}
+0 \\
 -1
-\\end{pmatrix}
-\\]
+\end{pmatrix}
+$$
 
 The basis vectors for all of these, \\(\\begin{pmatrix} 1 \\\\0 \\end{pmatrix}\\) and \\(\\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix}\\), are given the special notation \\(\\mid 0\\rangle\\) and \\(\\mid 1\\rangle\\), respectively.
 
@@ -82,10 +82,12 @@ This is the property you always hear about when people discuss qbits. It's often
 
 Let's take one of the qbit vectors from above as an example.
 
-\\[\\begin{pmatrix}
-\\frac{1}{\\sqrt{2}} \\\\
-\\frac{1}{\\sqrt{2}}
-\\end{pmatrix}\\]
+$$
+\begin{pmatrix}
+\frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}}
+\end{pmatrix}
+$$
 
 This qbit has a \\(\\frac{1}{2}\\) ( \\(= || \\frac{1}{\\sqrt{2}} || ^2\\)) probability of collapsing to either \\(0\\) or \\(1\\).
 
@@ -109,24 +111,24 @@ Thankfully, [IBM has made their quantum computers accessible via an API](https:/
 To represent multiple qbits, we need the concept of the tensor product.
 The notation works like this:
 
-\\[
-  \\binom{x\_0}{x\_1} \\otimes \\binom{y\_0}{y\_1}
-= \\begin{pmatrix} x\_0  \\binom{y\_0}{y\_1} \\\\
-x\_1  \\binom{y\_0}{y\_1} \\end{pmatrix}
-= \\begin{pmatrix} x\_0 y\_0 \\\\ x\_0 y\_1 \\\\ x\_1 y\_0 \\\\ x\_1 y\_1 \\end{pmatrix}
-\\]
+$$
+\binom{x\_0}{x\_1} \otimes \binom{y\_0}{y\_1}
+= \begin{pmatrix} x\_0  \binom{y\_0}{y\_1} \\
+x\_1  \binom{y\_0}{y\_1} \end{pmatrix}
+= \begin{pmatrix} x\_0 y\_0 \\ x\_0 y\_1 \\ x\_1 y\_0 \\ x\_1 y\_1 \end{pmatrix}
+$$
 
 Using this, we can represent 2 or 3 qbits as vectors.
 
-\\[
-|01\\rangle = \\binom{1}{0} \\otimes \\binom{0}{1} = \\begin{pmatrix}
-  0 \\\\ 1 \\\\ 0 \\\\ 0
-\\end{pmatrix}
-\\hspace{10pt}
-|100\\rangle = \\binom{0}{1} \\otimes \\binom{1}{0} \\otimes \\binom{1}{0} = \\begin{pmatrix}
-  0\\\\ 0\\\\0\\\\0 \\\\ 1 \\\\ 0 \\\\ 0 \\\\ 0
-\\end{pmatrix}
-\\]
+$$
+|01\rangle = \binom{1}{0} \otimes \binom{0}{1} = \begin{pmatrix}
+  0 \\ 1 \\ 0 \\ 0
+\end{pmatrix}
+\hspace{10pt}
+|100\rangle = \binom{0}{1} \otimes \binom{1}{0} \otimes \binom{1}{0} = \begin{pmatrix}
+  0\\ 0\\0\\0 \\ 1 \\ 0 \\ 0 \\ 0
+\end{pmatrix}
+$$
 
 A vector expressed as the result of a tensor product is called a product state. The product state of \\(n\\) qbits has size \\(2^n\\).
 If we have the following multi-qbit state:
@@ -142,16 +144,16 @@ Another important property of product states -- one that distinguishes them from
 
 The product state of multiple qbits satisfies the same constraint as a single qbit.
 
-\\[
-\\binom{a}{b} \\otimes \\binom{c}{d} =
-\\begin{pmatrix}
-  ac \\\\ ad \\\\ bc \\\\ bd
-\\end{pmatrix}
-\\]
+$$
+\binom{a}{b} \otimes \binom{c}{d} =
+\begin{pmatrix}
+  ac \\ ad \\ bc \\ bd
+\end{pmatrix}
+$$
 
-\\[
-  \\text{where, } ||ac||^2 + ||ad||^2 + ||bc||^2 + ||bd||^2 = 1
-\\]
+$$
+\text{where, } ||ac||^2 + ||ad||^2 + ||bc||^2 + ||bd||^2 = 1
+$$
 
 
 ### 1-bit operations
@@ -162,30 +164,30 @@ There are exactly four possible 1-bit operations: Identity, Negation, Constant-0
 
 Each operation can be represented as a matrix.
 
-\\[
-  \\text{Identity} = \\begin{pmatrix}
-1 & 0 \\\\
+$$
+\text{Identity} = \begin{pmatrix}
+1 & 0 \\
 0 & 1
-\\end{pmatrix}
-\\]
-\\[
-  \\text{Negation} = \\begin{pmatrix}
-0 & 1 \\\\
+\end{pmatrix}
+$$
+$$
+\text{Negation} = \begin{pmatrix}
+0 & 1 \\
 1 & 0
-\\end{pmatrix}
-\\]
-\\[
-  \\text{Constant-0} = \\begin{pmatrix}
-1 & 1 \\\\
+\end{pmatrix}
+$$
+$$
+\text{Constant-0} = \begin{pmatrix}
+1 & 1 \\
 0 & 0
-\\end{pmatrix}
-\\]
-\\[
-  \\text{Constant-1} = \\begin{pmatrix}
-0 & 0 \\\\
+\end{pmatrix}
+$$
+$$
+\text{Constant-1} = \begin{pmatrix}
+0 & 0 \\
 1 & 1
-\\end{pmatrix}
-\\]
+\end{pmatrix}
+$$
 
 <img src="/assets/images/1bit_matrix.png?style=centerme" width=70% alt="Matrix representations of 1-bit operations">
 
@@ -198,30 +200,30 @@ The CNOT operation takes two bits -- a control bit and a target bit. If the cont
 
 This operation can also be represented as a matrix.
 
-\\[
-  C = \\begin{pmatrix}
-1 & 0 & 0 & 0 \\\\
-0 & 1 & 0 & 0 \\\\
-0 & 0 & 0 & 1 \\\\
-0 & 0 & 1 & 0 \\\\
-\\end{pmatrix}
-\\]
+$$
+C = \begin{pmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 \\
+\end{pmatrix}
+$$
 
 <img src="/assets/images/CNOT_examples.png?style=centerme" width=60% alt="CNOT examples applied to 2-qbit states">
 
 In the quantum world, where probability reigns, the only way to perform deterministic operations is to multiply an unobserved qbit by a matrix.
 In the example below, the one thing we can be certain of is that the probabilities of observing 0 and 1 have been swapped.
 
-\\[
-  \\begin{pmatrix}
-0 & 1 \\\\
+$$
+\begin{pmatrix}
+0 & 1 \\
 1 & 0
-\\end{pmatrix} \\begin{pmatrix}
-  \\frac{1}{2} \\\\ \\frac{\\sqrt{3}}{2}
-\\end{pmatrix} = \\begin{pmatrix}
-  \\frac{\\sqrt{3}}{2} \\\\ \\frac{1}{2}
-\\end{pmatrix}
-\\]
+\end{pmatrix} \begin{pmatrix}
+  \frac{1}{2} \\ \frac{\sqrt{3}}{2}
+\end{pmatrix} = \begin{pmatrix}
+  \frac{\sqrt{3}}{2} \\ \frac{1}{2}
+\end{pmatrix}
+$$
 
 
 Of course, if we only use \\(\\mid0\\rangle\\) or \\(\\mid1\\rangle\\), which always collapse to 0 or 1, we wouldn't need matrix operations at all -- but then we'd just be using a classical computer.
@@ -250,99 +252,99 @@ The answer is one. To see why, we need a few more concepts.
 
 This is the H gate mentioned earlier.
 
-\\[
-  H = \\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} \\\\
-  \\frac{1}{\\sqrt{2}} & \\frac{-1}{\\sqrt{2}}
-\\end{pmatrix}
-\\]
+$$
+H = \begin{pmatrix}
+  \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+  \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}}
+\end{pmatrix}
+$$
 
 The Hadamard gate takes a 0- or 1-qbit and transforms it into a qbit with equal probability of being 0 or 1.
 
-\\[
-H\\mid0\\rangle = \\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} \\\\
-  \\frac{1}{\\sqrt{2}} & \\frac{-1}{\\sqrt{2}}
-\\end{pmatrix} \\begin{pmatrix}
-  1 \\\\ 0
-\\end{pmatrix} = \\begin{pmatrix}
-  \\frac{1}{\sqrt{2}} \\\\ \\frac{1}{\\sqrt{2}}
-\\end{pmatrix}
-\\]
+$$
+H\mid0\rangle = \begin{pmatrix}
+  \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+  \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}}
+\end{pmatrix} \begin{pmatrix}
+  1 \\ 0
+\end{pmatrix} = \begin{pmatrix}
+  \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
+\end{pmatrix}
+$$
 
-\\[
-H\\mid1\\rangle = \\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} \\\\
-  \\frac{1}{\\sqrt{2}} & \\frac{-1}{\\sqrt{2}}
-\\end{pmatrix} \\begin{pmatrix}
-  0 \\\\ 1
-\\end{pmatrix} = \\begin{pmatrix}
-  \\frac{1}{\sqrt{2}} \\\\ \\frac{-1}{\\sqrt{2}}
-\\end{pmatrix}
-\\]
+$$
+H\mid1\rangle = \begin{pmatrix}
+  \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+  \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}}
+\end{pmatrix} \begin{pmatrix}
+  0 \\ 1
+\end{pmatrix} = \begin{pmatrix}
+  \frac{1}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}}
+\end{pmatrix}
+$$
 
 The Hadamard gate has another important property: it sends a qbit with equal probability of 0 and 1 back to a definite 0- or 1-qbit.
 
-\\[
-\\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} \\\\
-  \\frac{1}{\\sqrt{2}} & \\frac{-1}{\\sqrt{2}}
-\\end{pmatrix} \\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} \\\\ \\frac{1}{\\sqrt{2}}
-\\end{pmatrix} = \\begin{pmatrix}
-  1 \\\\ 0
-\\end{pmatrix}
-\\]
+$$
+\begin{pmatrix}
+  \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+  \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}}
+\end{pmatrix} \begin{pmatrix}
+  \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
+\end{pmatrix} = \begin{pmatrix}
+  1 \\ 0
+\end{pmatrix}
+$$
 
-\\[
-\\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} & \\frac{1}{\\sqrt{2}} \\\\
-  \\frac{1}{\\sqrt{2}} & \\frac{-1}{\\sqrt{2}}
-\\end{pmatrix} \\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} \\\\ \\frac{-1}{\\sqrt{2}}
-\\end{pmatrix} = \\begin{pmatrix}
-  0 \\\\ 1
-\\end{pmatrix}
-\\]
+$$
+\begin{pmatrix}
+  \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+  \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}}
+\end{pmatrix} \begin{pmatrix}
+  \frac{1}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}}
+\end{pmatrix} = \begin{pmatrix}
+  0 \\ 1
+\end{pmatrix}
+$$
 
 
 #### X gate
 
 The X gate swaps the top and bottom components of a qbit.
 
-\\[
-  X =
-\\begin{pmatrix}
-   0 & 1 \\\\
+$$
+X =
+\begin{pmatrix}
+   0 & 1 \\
    1 & 0
-\\end{pmatrix}
-\\]
+\end{pmatrix}
+$$
 
-\\[
-\\begin{pmatrix}
-   0 & 1 \\\\
+$$
+\begin{pmatrix}
+   0 & 1 \\
    1 & 0
-\\end{pmatrix}
-\\begin{pmatrix}
-  0 \\\\ 1
-\\end{pmatrix}
-= \\begin{pmatrix}
-  1 \\\\ 0
-\\end{pmatrix}
-\\]
+\end{pmatrix}
+\begin{pmatrix}
+  0 \\ 1
+\end{pmatrix}
+= \begin{pmatrix}
+  1 \\ 0
+\end{pmatrix}
+$$
 
-\\[
-\\begin{pmatrix}
-   0 & 1 \\\\
+$$
+\begin{pmatrix}
+   0 & 1 \\
    1 & 0
-\\end{pmatrix}
-\\begin{pmatrix}
-  \\frac{-1}{\\sqrt{2}} \\\\ \\frac{1}{\\sqrt{2}}
-\\end{pmatrix}
-= \\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} \\\\ \\frac{-1}{\\sqrt{2}}
-\\end{pmatrix}
-\\]
+\end{pmatrix}
+\begin{pmatrix}
+  \frac{-1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
+\end{pmatrix}
+= \begin{pmatrix}
+  \frac{1}{\sqrt{2}} \\ \frac{-1}{\sqrt{2}}
+\end{pmatrix}
+$$
 
 
 The H gate and X gate operations are easier to understand with the diagram below. Red indicates the X gate and yellow indicates the H gate direction.
@@ -429,45 +431,45 @@ After preprocessing, both Input and Output are
 \\),
 so the CNOT operation can be written as:
 
-\\[
-C \\begin{pmatrix}
-  \\begin{pmatrix}
-    \\frac{1}{\\sqrt{2}} \\\\
-    \\frac{-1}{\\sqrt{2}}
-  \\end{pmatrix} \\otimes
-    \\begin{pmatrix}
-    \\frac{1}{\\sqrt{2}} \\\\
-    \\frac{-1}{\\sqrt{2}}
-  \\end{pmatrix}
-\\end{pmatrix} = C \\begin{pmatrix}
-  \\frac{1}{2} \\\\
-  \\frac{-1}{2} \\\\
-  \\frac{-1}{2} \\\\
-  \\frac{1}{2}
-\\end{pmatrix} = \\frac{1}{2} \\begin{pmatrix}
-  1 & 0 & 0 & 0 \\\\
-  0 & 1 & 0 & 0 \\\\
-  0 & 0 & 0 & 1 \\\\
-  0 & 0 & 1 & 0 \\\\
-\\end{pmatrix} \\begin{pmatrix}
-  1 \\\\
-  -1 \\\\
-  -1 \\\\
+$$
+C \begin{pmatrix}
+  \begin{pmatrix}
+    \frac{1}{\sqrt{2}} \\
+    \frac{-1}{\sqrt{2}}
+  \end{pmatrix} \otimes
+    \begin{pmatrix}
+    \frac{1}{\sqrt{2}} \\
+    \frac{-1}{\sqrt{2}}
+  \end{pmatrix}
+\end{pmatrix} = C \begin{pmatrix}
+  \frac{1}{2} \\
+  \frac{-1}{2} \\
+  \frac{-1}{2} \\
+  \frac{1}{2}
+\end{pmatrix} = \frac{1}{2} \begin{pmatrix}
+  1 & 0 & 0 & 0 \\
+  0 & 1 & 0 & 0 \\
+  0 & 0 & 0 & 1 \\
+  0 & 0 & 1 & 0 \\
+\end{pmatrix} \begin{pmatrix}
+  1 \\
+  -1 \\
+  -1 \\
   1
-\\end{pmatrix} = \\frac{1}{2} \\begin{pmatrix}
-  1 \\\\
-  -1 \\\\
-  1 \\\\
+\end{pmatrix} = \frac{1}{2} \begin{pmatrix}
+  1 \\
+  -1 \\
+  1 \\
   -1
-\\end{pmatrix} = \\begin{pmatrix}
-    \\frac{1}{\\sqrt{2}} \\\\
-    \\frac{1}{\\sqrt{2}}
-  \\end{pmatrix} \\otimes
-    \\begin{pmatrix}
-    \\frac{1}{\\sqrt{2}} \\\\
-    \\frac{-1}{\\sqrt{2}}
-  \\end{pmatrix}
-\\]
+\end{pmatrix} = \begin{pmatrix}
+    \frac{1}{\sqrt{2}} \\
+    \frac{1}{\sqrt{2}}
+  \end{pmatrix} \otimes
+    \begin{pmatrix}
+    \frac{1}{\sqrt{2}} \\
+    \frac{-1}{\sqrt{2}}
+  \end{pmatrix}
+$$
 
 So Input changes from
 \\(
@@ -556,41 +558,41 @@ Entangled qbits can be easily created using a CNOT gate and an H gate.
 
 <img src="/assets/images/entanlge.png?style=centerme" width=50% alt="Entangled qbit">
 
-\\[
+$$
 CH\_1
-\\begin{pmatrix}
-  \\begin{pmatrix}
-    1 \\\\
+\begin{pmatrix}
+  \begin{pmatrix}
+    1 \\
     0
-  \\end{pmatrix} \\otimes \\begin{pmatrix}
-    1 \\\\
+  \end{pmatrix} \otimes \begin{pmatrix}
+    1 \\
     0
-  \\end{pmatrix}
-\\end{pmatrix} = C \\begin{pmatrix}
-  \\begin{pmatrix}
-    \\frac{1}{\\sqrt{2}} \\\\
-    \\frac{1}{\\sqrt{2}}
-  \\end{pmatrix} \\otimes \\begin{pmatrix}
-    1 \\\\ 0
-  \\end{pmatrix}
-\\end{pmatrix} =
-\\begin{pmatrix}
-  1 & 0 & 0 & 0 \\\\
-0 & 1 & 0 & 0 \\\\
-0 & 0 & 0 & 1 \\\\
-0 & 0 & 1 & 0 \\\\
-\\end{pmatrix} \\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} \\\\
-  0 \\\\
-  \\frac{1}{\\sqrt{2}} \\\\
+  \end{pmatrix}
+\end{pmatrix} = C \begin{pmatrix}
+  \begin{pmatrix}
+    \frac{1}{\sqrt{2}} \\
+    \frac{1}{\sqrt{2}}
+  \end{pmatrix} \otimes \begin{pmatrix}
+    1 \\ 0
+  \end{pmatrix}
+\end{pmatrix} =
+\begin{pmatrix}
+  1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 \\
+\end{pmatrix} \begin{pmatrix}
+  \frac{1}{\sqrt{2}} \\
+  0 \\
+  \frac{1}{\sqrt{2}} \\
   0
-\\end{pmatrix} = \\begin{pmatrix}
-  \\frac{1}{\\sqrt{2}} \\\\
-  0 \\\\
-  0 \\\\
-  \\frac{1}{\\sqrt{2}}
-\\end{pmatrix}
-\\]
+\end{pmatrix} = \begin{pmatrix}
+  \frac{1}{\sqrt{2}} \\
+  0 \\
+  0 \\
+  \frac{1}{\sqrt{2}}
+\end{pmatrix}
+$$
 
 This is the same H + CNOT pattern that appears in the Deutsch-Jozsa circuit. Entanglement is doing work there even when it isn't the point.
 
