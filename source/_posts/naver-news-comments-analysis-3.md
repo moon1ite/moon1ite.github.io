@@ -7,7 +7,7 @@ tags:
 - AI
 categories: 
 - Tech
-- ML
+- AI
 toc: true
 widgets:
    - type: toc
