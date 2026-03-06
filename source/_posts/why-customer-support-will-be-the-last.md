@@ -80,12 +80,12 @@ Stripe is a clean example. "Why did my charge fail?" used to generate support ti
 
 As building gets cheaper, more ticket classes disappear the same way. The queue doesn't shrink because CS gets more efficient. It shrinks because there's less to handle.
 
-[^1]: ["Anthropic acquires computer-use AI startup Vercept."](https://techcrunch.com/2026/02/25/anthropic-acquires-vercept-ai-startup-agents-computer-use-founders-investors/) TechCrunch, February 2026.
-[^2]: ["Measuring AI Agent Autonomy."](https://www.anthropic.com/research/measuring-agent-autonomy) Anthropic, 2026.
-[^3]: Gartner. ["Gartner Customer 360 Summit 2011: CRM Strategies and Technologies to Understand, Grow and Manage Customer Experiences."](https://www.gartner.com/imagesrv/summits/docs/na/customer-360/C360_2011_brochure_FINAL.pdf) Gartner, 2011.
+[^1]: [Anthropic acquires computer-use AI startup Vercept.](https://techcrunch.com/2026/02/25/anthropic-acquires-vercept-ai-startup-agents-computer-use-founders-investors/) TechCrunch, February 2026.
+[^2]: [Measuring AI Agent Autonomy.](https://www.anthropic.com/research/measuring-agent-autonomy) Anthropic, 2026.
+[^3]: Gartner. [Gartner Customer 360 Summit 2011: CRM Strategies and Technologies to Understand, Grow and Manage Customer Experiences.](https://www.gartner.com/imagesrv/summits/docs/na/customer-360/C360_2011_brochure_FINAL.pdf) Gartner, 2011.
 [^4]: Moravec, H. [*Mind Children: The Future of Robot and Human Intelligence*](https://doi.org/10.2307/j.ctvbj7j1x). Harvard University Press, 1988.
-[^5]: Schaal (2025) quantified Moravec's Paradox across 19,000 O*NET tasks: [arXiv:2510.13369](https://arxiv.org/abs/2510.13369). See also OpenAI, ["GDPval"](https://arxiv.org/abs/2510.04374) (arXiv:2510.04374, 2025) and ["Anthropic Economic Index, January 2026 Report."](https://www.anthropic.com/research/anthropic-economic-index-january-2026-report)
-[^6]: Autor. ["Polanyi's Paradox and the Shape of Employment Growth."](https://www.nber.org/papers/w20485) NBER Working Paper 20485, 2014.
+[^5]: Schaal (2025) quantified Moravec's Paradox across 19,000 O*NET tasks: [arXiv:2510.13369](https://arxiv.org/abs/2510.13369). See also OpenAI, [GDPval](https://arxiv.org/abs/2510.04374) (arXiv:2510.04374, 2025) and [Anthropic Economic Index, January 2026 Report.](https://www.anthropic.com/research/anthropic-economic-index-january-2026-report)
+[^6]: Autor. [Polanyi's Paradox and the Shape of Employment Growth.](https://www.nber.org/papers/w20485) NBER Working Paper 20485, 2014.
 [^7]: Lu (2025) found LLMs capture abstract and procedural tacit knowledge but not embodied knowledge. [Review of Austrian Economics](https://link.springer.com/article/10.1007/s11138-025-00710-5). Xu et al. (2025) tested 4,442 human concepts and found LLMs barely register sensory and motor features. [Nature Human Behaviour](https://www.nature.com/articles/s41562-025-02203-8).
-[^8]: Perez et al. ["Towards Understanding Sycophancy in Language Models."](https://arxiv.org/abs/2310.13548) ICLR 2024.
-[^9]: Shapira et al. ["How RLHF Amplifies Sycophancy."](https://arxiv.org/abs/2602.01002) arXiv:2602.01002, 2026. See also Casper et al. ["Open Problems and Fundamental Limitations of RLHF."](https://arxiv.org/abs/2307.15217) 2023.
+[^8]: Perez et al. [Towards Understanding Sycophancy in Language Models.](https://arxiv.org/abs/2310.13548) ICLR 2024.
+[^9]: Shapira et al. [How RLHF Amplifies Sycophancy.](https://arxiv.org/abs/2602.01002) arXiv:2602.01002, 2026. See also Casper et al. [Open Problems and Fundamental Limitations of RLHF.](https://arxiv.org/abs/2307.15217) 2023.
