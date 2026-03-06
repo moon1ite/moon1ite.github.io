@@ -4,7 +4,7 @@ layout: post
 date: 2021-02-04 14:22
 description: "Pandas DataFrame의 iterrows, itertuples, apply, vectorization 등 다양한 순회 방법을 속도와 사용성 면에서 비교."
 tags:
-- pandas
+- engineering
 categories: 
 - Tech
 - Engineering

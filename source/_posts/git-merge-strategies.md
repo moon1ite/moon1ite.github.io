@@ -4,7 +4,7 @@ layout: post
 date: 2021-07-11 01:03
 description: "Merge Commit, Squash and Merge, Rebase and Merge 세 가지 전략을 비교하고 팀에 맞는 전략을 고르는 기준을 정리."
 tags:
-- git
+- engineering
 categories: 
 - Tech
 - Engineering

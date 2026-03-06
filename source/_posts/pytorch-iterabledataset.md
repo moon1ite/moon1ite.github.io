@@ -4,7 +4,7 @@ layout: post
 date: 2021-02-21 23:22
 description: "PyTorch IterableDataset 사용법과 주의점. 대용량 데이터 로딩 시 Dataset 대비 장단점과 num_workers 이슈 정리."
 tags:
-- pytorch
+- engineering
 categories: 
 - Tech
 - Engineering
