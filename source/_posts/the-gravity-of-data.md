@@ -5,6 +5,7 @@ date: 2026-03-12 10:00
 description: "Your MCP connections reveal who survives the AI shift — the ones holding data that LLMs can't generate on their own."
 tags:
 - AI
+- Startup
 categories:
 - Startup
 toc: true

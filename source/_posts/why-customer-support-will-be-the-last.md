@@ -6,6 +6,7 @@ description: "We tried to automate customer support first. It turned out to be t
 language: en
 tags:
 - AI
+- Startup
 categories:
 - Startup
 toc: true

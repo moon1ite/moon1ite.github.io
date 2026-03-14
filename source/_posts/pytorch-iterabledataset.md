@@ -4,8 +4,8 @@ layout: post
 date: 2021-02-21 23:22
 description: "PyTorch IterableDataset 사용법과 주의점. 대용량 데이터 로딩 시 Dataset 대비 장단점과 num_workers 이슈 정리."
 tags:
-- engineering
-categories: 
+- Engineering
+categories:
 - Tech
 - Engineering
 toc: true
@@ -19,7 +19,6 @@ widgets:
 ---
 
 PyTorch 1.2 이상부터 `torch.utils.data` 에서는 크게 map-style dataset (`torch.utils.data.Dataset`) 과 iterable dataset (`torch.utils.data.IterableDataset`) 의 두 종류의 데이터 클래스를 지원하고 있다. 데이터 사이즈가 클 때는 `IterableDataset` 을 사용하는 것이 좋은데, `Dataset` 과는 딜리 아직 개발되어야 할 기능이 더 필요한 클래스라서 사용할 때에 유의할 점이 있어 정리해보게 되었다.
-
 
 <!--more-->
 
@@ -73,7 +72,7 @@ class MyIterableDataset(IterableDataset):
 
 <img src="/assets/images/pytorch-iterabledataset-numworkers.png?style=centerme" alt="num_workers == 2 인 경우 발생하는 모습이다. 위의 두 라인은 subprocess이며, 맨 아래 라인은 main process이다. 파란색 박스는 single datapoint를 로딩하는 것을 의미하며 붉은색 박스는 로딩된 데이터를 모델에 전달하는 프로세스를 의미한다. (image credit: https://medium.com/speechmatics/how-to-build-a-streaming-dataloader-with-pytorch-a66dd891d9dd)" width=90%>
 
-`num_workers`는 데이터셋을 불러올 때 사용할 subprocess의 개수이다. `num_workers == 0` 은 main process에서 데이터를 불러오고 모델에 pass하는 작업을 모두 수행한다는 뜻이며, `num_workers == 2`는 subprocess 2개에서 데이터를 불러오고 main process에서는 subprocess에서 불러온 데이터를 model에 pass하는 역할만 담당한다. 따라서 `num_workers > 0` 일 때 data loading에서의 병목이 줄어들며 gpu utilization 을 100% 가까이 끌어올릴 수 있다. 
+`num_workers`는 데이터셋을 불러올 때 사용할 subprocess의 개수이다. `num_workers == 0` 은 main process에서 데이터를 불러오고 모델에 pass하는 작업을 모두 수행한다는 뜻이며, `num_workers == 2`는 subprocess 2개에서 데이터를 불러오고 main process에서는 subprocess에서 불러온 데이터를 model에 pass하는 역할만 담당한다. 따라서 `num_workers > 0` 일 때 data loading에서의 병목이 줄어들며 gpu utilization 을 100% 가까이 끌어올릴 수 있다.
 
 그럼, `num_workers > 0` 일 때 어떤 현상이 발생하는지 살펴보자.
 
@@ -84,21 +83,21 @@ from torch.utils.data import DataLoader, Dataset, IterableDataset
 import time
 
 class MyMapDataset(Dataset):
-    
+
     def __init__(self, data):
         self.data = data
-        
+
     def __len__(self):
         return len(self.data)
-    
+
     def __getitem__(self, index):
         worker = torch.utils.data.get_worker_info()
         worker_id = worker.id if worker is not None else -1
-        
+
         start = time.time()
         time.sleep(0.1)
         end = time.time()
-        
+
         return self.data[index], worker_id, start, end
 
 data = range(16)
@@ -144,19 +143,19 @@ from torch.utils.data import DataLoader, Dataset, IterableDataset
 import time
 
 class MyIterableDataset(IterableDataset):
-    
+
     def __init__(self, data):
         self.data = data
-    
+
     def __iter__(self):
         for x in self.data:
             worker = torch.utils.data.get_worker_info()
             worker_id = worker.id if worker is not None else -1
-        
+
             start = time.time()
             time.sleep(0.1)
             end = time.time()
-        
+
             yield x, worker_id, start, end
 
 data = range(16)
@@ -202,11 +201,11 @@ tensor([12, 13, 14, 15]) tensor([1, 1, 1, 1])
 ```python
 def worker_init_fn(_):
     worker_info = torch.utils.data.get_worker_info()
-    
+
     dataset = worker_info.dataset
     worker_id = worker_info.id
     split_size = len(dataset.data) // worker_info.num_workers
-    
+
     dataset.data = dataset.data[worker_id * split_size: (worker_id + 1) * split_size]
 ```
 
@@ -229,8 +228,8 @@ tensor([12, 13, 14, 15]) tensor([1, 1, 1, 1])
 
 - `IterableDataset` 은 데이터가 메모리에 올라가지 않을만큼 클 때 사용하면 좋다.
 - `Dataset`과 다르게 `__iter__()`를 선언해서 데이터를 부른다.
-    - 하지만 이 특징 때문에 `Sampler` 와 함께 사용할 수 없다.
-    - 또한 `num_workers > 0` 인 세팅에서는 각 워커에서 다른 데이터를 불러올 수 있도록 `worker_init_fn`을 선언해야 한다.
+  - 하지만 이 특징 때문에 `Sampler` 와 함께 사용할 수 없다.
+  - 또한 `num_workers > 0` 인 세팅에서는 각 워커에서 다른 데이터를 불러올 수 있도록 `worker_init_fn`을 선언해야 한다.
 
 ## References
 

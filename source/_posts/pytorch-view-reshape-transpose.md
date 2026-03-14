@@ -4,8 +4,8 @@ layout: post
 date: 2021-03-03 04:22
 description: "PyTorch view, reshape, transpose의 차이점. contiguous 개념을 이해하면 텐서 차원 변환의 실수를 줄일 수 있다."
 tags:
-- engineering
-categories: 
+- Engineering
+categories:
 - Tech
 - Engineering
 toc: true
@@ -51,7 +51,6 @@ tensor([[[ 0,  1],
 
 ## view
 
-
 `view` 를 통해 `t` 라는 tensor의 shape를 변경시켜보았다.
 
 ```python
@@ -72,7 +71,7 @@ tensor([[[ 0,  1,  2],
          [21, 22, 23]]])
 {% endcodeblock %}
 
-shape이 `(4, 2, 3)` 으로 잘 바뀐 것을 확인할 수 있다. 그리고 `tv[0][0][0]` → `tv[0][0][1]` → `tv[0][0][2]` ... 의 데이터 포인터 위치 (`0` → `1` → `2` ... ) 또한 연속적이기 때문에 `tv` 는 `contiguous`  하다. 
+shape이 `(4, 2, 3)` 으로 잘 바뀐 것을 확인할 수 있다. 그리고 `tv[0][0][0]` → `tv[0][0][1]` → `tv[0][0][2]` ... 의 데이터 포인터 위치 (`0` → `1` → `2` ... ) 또한 연속적이기 때문에 `tv` 는 `contiguous`  하다.
 
 ```python
 tv.is_contiguous()
@@ -80,7 +79,7 @@ tv.is_contiguous()
 True
 ```
 
-데이터의 tensor index 순서대로 tensor를 flatten 시켜주는 함수를 통해 `t` 와 `tv` 를 비교하면 동일하게 나오는 것을 확인할 수 있다. 
+데이터의 tensor index 순서대로 tensor를 flatten 시켜주는 함수를 통해 `t` 와 `tv` 를 비교하면 동일하게 나오는 것을 확인할 수 있다.
 
 ```python
 t.flatten() == tv.flatten()
@@ -89,7 +88,7 @@ tensor([True, True, True, True, True, True, True, True, True, True, True, True,
         True, True, True, True, True, True, True, True, True, True, True, True])
 ```
 
-또한 `t` 와 `tv` 의 데이터는 pointer 값이 동일하여 한 쪽의 tensor data 를 수정하면 다른 쪽의 값도 동시에 변경된다. 
+또한 `t` 와 `tv` 의 데이터는 pointer 값이 동일하여 한 쪽의 tensor data 를 수정하면 다른 쪽의 값도 동시에 변경된다.
 
 ```python
 t.storage().data_ptr() == tv.storage().data_ptr()  # data pointer 값이 일치함
@@ -106,7 +105,6 @@ tensor(99)
 ```
 
 ## transpose
-
 
 `transpose` 를 통해 `t` 라는 텐서의 shape을 변경시켜보았다. shape은 `tv`와 동일하나, 구성이 조금 다른 것을 확인할 수 있다. 참고로, 보통 `(batch_size, hidden_dim, input_dim)` 을 `(batch_size, input_dim, hidden_dim)` 으로 바꿔주는 작업을 할 때에 `transpose` 를 사용한다.
 
@@ -146,7 +144,6 @@ tensor([ 0,  2,  4,  1,  3,  5,  6,  8, 10,  7,  9, 11, 12, 14, 16, 13, 15, 17,
 ```
 
 ## contiguous
-
 
 그렇다면 강제로 물리적 위치를 연속적으로 만들어버리면 어떻게 될까? 겉보기에는 `tt` 와 별 차이가 없어보인다.
 
@@ -240,12 +237,11 @@ True
 
 ## Summary
 
-
 - `view` : tensor 에 저장된 데이터의 물리적 위치 순서와 index 순서가 일치할 때 (`contiguous`) shape을 재구성한다. 이 때문에 항상 `contiguous` 하다는 성질이 보유된다.
 - `transpose` :  tensor 에 저장된 데이터의 물리적 위치 순서와 **상관없이** 수학적 의미의 transpose를 수행한다. 즉, 물리적 위치와 transpose가 수행된 tensor 의 index 순서는 같다는 보장이 없으므로 항상 `contiguous` 하지 않다.
 - `reshape` : tensor 에 저장된 데이터의 물리적 위치 순서와 index 순서가 일치하지 않아도 shape을 재구성한 이후에 강제로 일치시킨다. 이 때문에 항상 `contiguous` 하다는 성질이 보유된다.
 
-
 ## References
+
 - [https://inmoonlight.github.io/notebooks/html/2021-03-03-PyTorch-view-transpose-reshape.html](https://inmoonlight.github.io/notebooks/html/2021-03-03-PyTorch-view-transpose-reshape.html)
 - [https://discuss.pytorch.org/t/contigious-vs-non-contigious-tensor/30107/2](https://discuss.pytorch.org/t/contigious-vs-non-contigious-tensor/30107/2)

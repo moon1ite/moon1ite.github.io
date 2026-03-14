@@ -5,7 +5,7 @@ date: 2026-02-24 00:00
 description: "A math-based introduction to quantum computing using the Deutsch-Jozsa problem. One query instead of two."
 language: en
 tags:
-- quantum-computing
+- Quantum Computing
 categories:
 - Tech
 - Quantum Computing

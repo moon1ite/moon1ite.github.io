@@ -5,6 +5,7 @@ date: 2026-02-22 09:00
 description: "What I learned building an AI startup as LLMs ate the application layer — and why B2B SaaS is next."
 tags:
 - AI
+- Startup
 categories:
 - Startup
 toc: true
@@ -73,5 +74,5 @@ The problem is deeper than interface. A recommendation without rejected alternat
 
 The moat keeps shrinking. I don't know what the B2C version of this looks like yet. But if the pattern holds, the last ones standing won't be the ones with the best interface or the smartest model. They'll be the ones holding data that no LLM can generate on its own.
 
-[^1]: https://finance.yahoo.com/news/traders-dump-software-stocks-ai-115502147.html
-[^2]: https://www.anthropic.com/research/measuring-agent-autonomy
+[^1]: <https://finance.yahoo.com/news/traders-dump-software-stocks-ai-115502147.html>
+[^2]: <https://www.anthropic.com/research/measuring-agent-autonomy>
