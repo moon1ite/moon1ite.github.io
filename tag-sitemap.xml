@@ -10,21 +10,21 @@
     </url>
 
     <url>
-        <loc>https://www.thespacemoon.com/tags/quantum-computing/</loc>
+        <loc>https://www.thespacemoon.com/tags/Startup/</loc>
+        <lastmod>2026-03-12T01:00:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.thespacemoon.com/tags/Quantum-Computing/</loc>
         <lastmod>2026-02-23T15:00:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.thespacemoon.com/tags/startup/</loc>
-        <lastmod>2025-07-20T00:00:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.thespacemoon.com/tags/engineering/</loc>
+        <loc>https://www.thespacemoon.com/tags/Engineering/</loc>
         <lastmod>2021-07-10T16:03:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
