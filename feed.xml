@@ -6,7 +6,7 @@
   <link href="https://www.thespacemoon.com/feed.xml" rel="self"/>
   
   <link href="https://www.thespacemoon.com/"/>
-  <updated>2026-03-12T01:00:00.000Z</updated>
+  <updated>2026-03-24T01:00:00.000Z</updated>
   <id>https://www.thespacemoon.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Coding Backward</title>
+    <link href="https://www.thespacemoon.com/2026/03/24/coding-backward/"/>
+    <id>https://www.thespacemoon.com/2026/03/24/coding-backward/</id>
+    <published>2026-03-24T01:00:00.000Z</published>
+    <updated>2026-03-24T01:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>I'd never built an app before. Claude Code made me think I could.</p><p>Backend is my world — I've done it for years. API design, datamodeling, infrastructure. But the app side? I didn't know React Nativefrom Expo, let alone how navigation stacks or state management worked onthe client side.</p><p>The usual approach: read the docs, understand the framework, designthe architecture, then write code. I did the opposite. I opened ClaudeCode, described what I wanted, and started building. When somethingbroke, I fixed it. When something worked, I moved on. I learned whythings worked by watching them work — or fail.</p><p>I coded backward.</p><span id="more"></span><h2 id="backward-from-where-i-can-review">Backward from where I canreview</h2><p>For the backend, I read the AI's code and judged it immediately. Datamodeling, error handling, API structure — I knew what correct lookedlike. When Claude Code made a decision I disagreed with, I caught it inthe code, before running anything. The review happened early because Ihad the frame of reference to question the choices.</p><p>For the frontend, I couldn't do that. I didn't know enough to read aReact Native component and tell good from bad. So I reviewed later —when I ran the app, tapped through screens, and something felt wrong orbroke. The review point moved from the code to the result.</p><p>Early on, I started the way a human team would: build the frontendwith mock data, connect the real API later. But with AI, I quicklystarted building frontend and backend at the same time. The mock databecame dead code the moment real endpoints went live. I missed it — Iwas reviewing the features, not the scaffolding. By the time I found it,mock data was scattered across the codebase. My review didn't catch itbecause I didn't know to look there.</p><p>I didn't stop studying, designing, and coding — those steps collapsedinto one. My job became review. Where I reviewed depended on what Ialready knew.</p><h2 id="what-made-backward-possible">What made backward possible</h2><p>The old way of building software — design carefully, get each stepright before moving on — wasn't arbitrary. It was rational. Becausefixing was expensive.</p><h3 id="the-economics">The economics</h3><p>Changing architecture meant rewriting modules. If you wanted torefactor a component tree, you had to trace every dependency. Going backcost days or weeks. A wrong early decision compounded through everylayer built on top of it. So you invested heavily upfront: anticipatefuture needs, get the data model right, think three steps ahead. Thecost of prevention was lower than the cost of repair.</p><p>Then the economics flipped.</p><p>The cost of AI-assisted refactoring had been dropping for a while —Copilot, Cursor, earlier Claude versions all made it faster. But whenAnthropic dropped the 2x surcharge on longcontext<sup id="fnref:1"><a href="#fn:1" rel="footnote"><spanclass="hint--top hint--error hint--medium hint--rounded hint--bounce"aria-label="[1M context now generally available](https://claude.com/blog/1m-context-ga)">[1]</span></a></sup> and 1M tokens hit standard pricing, the shiftstopped feeling theoretical.</p><p>Claude could hold my entire codebase in one pass. Its output wasbetter aligned with the existing code and cheaper than before. When Iasked it to rewrite a module, it traced imports across files I'dforgotten existed. I stopped thinking about whether a refactor was"worth it." The technical cost of fixing collapsed.</p><h3 id="the-social-cost">The social cost</h3><p>In the old world, asking someone to redo their work had friction.You'd soften the feedback, batch your requests, sometimes accept "goodenough" to avoid the conversation. Asking a question you felt you shouldalready know the answer to was embarrassing. Every interaction carriedemotional overhead.</p><p>AI doesn't complain. You can ask a basic question without feelingstupid. You can hand it the most tedious scaffolding task without guilt.You can say "redo this completely" ten times and it doesn't push back,get tired, or lose motivation. I became bolder — not because I gotsmarter, but because the friction disappeared.</p><p>Everyone talks about the economics — AI is faster, cheaper. But Ithink the social cost was the bigger barrier. You can push through aslow refactor if you have to. It's harder to push through the discomfortof asking someone to redo their work for the third time.</p><h2 id="the-bet">The bet</h2><p>I'm still testing whether "build fast and fix" actually beats "thinkdeeply and build once." The app will tell me. If it ships and holds up —if the architecture doesn't collapse under its own weight, if thedecisions I couldn't judge turn out to be sound — then coding backwardworks. If it doesn't, I'll know exactly where my review failed.</p><p>The code AI writes on its first pass is still not great. But show itthe whole picture and ask it to refactor, and it improves. It can'treason about the full picture in a single shot. So it compensates withrepetition: build, see the result, refactor, review, repeat. What itlacks in depth it makes up in cycles.</p><p>But the reviewer has blind spots too. AI can't fill gaps I don't knowI have. The problems are probably already in the codebase — they justhaven't surfaced yet. That's what makes this uncomfortable. Not that theprocess is new, but that I won't know if it failed until later.</p><p>Trusting a process built on "fix it later" doesn't sit right — notafter years of training myself to get it right the first time. But I'mlearning backward. Understanding why things work by watching themwork.</p><p>I'm coding backward. It's faster. It's cheaper. And the thing I'mbetting on is that I can learn backward fast enough.</p><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><spanstyle="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><spanstyle="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://claude.com/blog/1m-context-ga">1Mcontext now generally available</a><a href="#fnref:1" rev="footnote">↩︎</a></span></li></ol></div></div>]]></content>
+    
+    
+    <summary type="html">AI didn&#39;t replace each step of development. It changed where humans review.</summary>
+    
+    
+    
+    <category term="Tech" scheme="https://www.thespacemoon.com/categories/Tech/"/>
+    
+    <category term="Engineering" scheme="https://www.thespacemoon.com/categories/Tech/Engineering/"/>
+    
+    
+    <category term="AI" scheme="https://www.thespacemoon.com/tags/AI/"/>
+    
+    <category term="Engineering" scheme="https://www.thespacemoon.com/tags/Engineering/"/>
+    
+  </entry>
   
   <entry>
     <title>The Gravity of Data</title>
@@ -33,9 +58,9 @@
     <category term="Startup" scheme="https://www.thespacemoon.com/categories/Startup/"/>
     
     
-    <category term="Startup" scheme="https://www.thespacemoon.com/tags/Startup/"/>
-    
     <category term="AI" scheme="https://www.thespacemoon.com/tags/AI/"/>
+    
+    <category term="Startup" scheme="https://www.thespacemoon.com/tags/Startup/"/>
     
   </entry>
   
@@ -56,9 +81,9 @@
     <category term="Startup" scheme="https://www.thespacemoon.com/categories/Startup/"/>
     
     
-    <category term="Startup" scheme="https://www.thespacemoon.com/tags/Startup/"/>
-    
     <category term="AI" scheme="https://www.thespacemoon.com/tags/AI/"/>
+    
+    <category term="Startup" scheme="https://www.thespacemoon.com/tags/Startup/"/>
     
   </entry>
   
@@ -102,9 +127,9 @@
     <category term="Startup" scheme="https://www.thespacemoon.com/categories/Startup/"/>
     
     
-    <category term="Startup" scheme="https://www.thespacemoon.com/tags/Startup/"/>
-    
     <category term="AI" scheme="https://www.thespacemoon.com/tags/AI/"/>
+    
+    <category term="Startup" scheme="https://www.thespacemoon.com/tags/Startup/"/>
     
   </entry>
   
