@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Regenerate the site's Open Graph card at source/img/og_image.png.
 
+Lives in tools/, not scripts/: Hexo requires every file under scripts/ as a
+plugin at startup, so a non-JavaScript file there fails to load on every build.
+
 One card for the whole site. The theme falls back to /img/og_image.png for any
 page without an inline image, so this covers the home page, /about/ and every
 text-only post; posts that carry images keep advertising their own.
 
-Usage:  python3 scripts/make_og.py        (from the repo root)
+Usage:  python3 tools/make_og.py         (from the repo root)
 Needs:  pillow
 """
 from pathlib import Path
