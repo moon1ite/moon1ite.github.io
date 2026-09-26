@@ -25,7 +25,7 @@ widgets:
     position: left
 ---
 
-**I'm Jihyung Moon.** I make AI products. Previously made AI papers. Still debugging.
+**I'm Jihyung Moon.** I ship AI products. Previously made AI papers and startup. Still debugging.
 
 ---
 
