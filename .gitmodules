@@ -1,3 +1,4 @@
 [submodule "themes/icarus"]
 	path = themes/icarus
 	url = git@github.com:inmoonlight/hexo-icarus-customized.git
+	branch = icarus-6.1.1-customized
